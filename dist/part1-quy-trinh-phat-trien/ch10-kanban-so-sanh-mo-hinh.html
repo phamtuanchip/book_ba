@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="./ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="./ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="./ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="./ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class="active"><a href="./ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="./ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="../part7-phu-luc/appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="../part7-phu-luc/appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 10: Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Giải thích được nguyên lý cốt lõi của Kanban: luồng liên tục (continuous flow) và giới hạn công
+việc đang làm (WIP limit).</li>
+<li>Phân biệt được Kanban với Scrum — điểm khác biệt quan trọng nhất là gì.</li>
+<li>Dùng được bảng tiêu chí để chọn mô hình phù hợp cho một dự án cụ thể, thay vì chọn theo trào lưu.</li>
+</ul>
+<h2>10.1 Kanban là gì?</h2>
+<p><strong>Kanban</strong> (tiếng Nhật nghĩa là &quot;bảng hiệu&quot;/&quot;thẻ trực quan&quot;) là phương pháp quản lý công việc dựa
+trên <strong>luồng liên tục</strong>, khác với Scrum tổ chức công việc theo các chu kỳ cố định (sprint). Công
+việc di chuyển qua các cột trạng thái (ví dụ: To Do → Đang phân tích → Đang làm → Đang test →
+Xong) trên một <strong>bảng Kanban</strong>, mỗi cột có thể giới hạn số lượng công việc tối đa được phép nằm
+trong đó cùng lúc — gọi là <strong>WIP limit (Work In Progress limit)</strong>.</p>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    Todo[&quot;To Do&lt;br/&gt;(không giới hạn)&quot;] --&gt; Analysis[&quot;Đang phân tích&lt;br/&gt;(WIP tối đa: 3)&quot;]
+    Analysis --&gt; Dev[&quot;Đang code&lt;br/&gt;(WIP tối đa: 4)&quot;]
+    Dev --&gt; Test[&quot;Đang test&lt;br/&gt;(WIP tối đa: 3)&quot;]
+    Test --&gt; Done[&quot;Xong&quot;]
+</pre></div>
+<p><strong>Vì sao cần giới hạn WIP?</strong> Nguyên lý cốt lõi: làm nhiều việc cùng lúc (đa nhiệm) khiến mỗi việc
+đều chậm lại do chi phí chuyển đổi ngữ cảnh (context switching). Giới hạn WIP buộc đội <strong>hoàn
+thành việc đang làm trước khi nhận việc mới</strong> — thường tạo ra thời gian hoàn thành (lead time)
+ngắn hơn cho toàn hệ thống, dù có vẻ nghịch lý.</p>
+<h2>10.2 Kanban khác Scrum ở đâu?</h2>
+<table>
+<thead>
+<tr>
+<th>Tiêu chí</th>
+<th>Scrum</th>
+<th>Kanban</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nhịp độ</td>
+<td>Cố định (sprint 1-4 tuần)</td>
+<td>Liên tục, không chia chu kỳ cố định</td>
+</tr>
+<tr>
+<td>Vai trò</td>
+<td>Định nghĩa rõ (PO, SM, Developers)</td>
+<td>Không định nghĩa vai trò bắt buộc</td>
+</tr>
+<tr>
+<td>Cách giới hạn công việc</td>
+<td>Giới hạn theo Sprint Backlog (số lượng công việc chọn cho sprint)</td>
+<td>Giới hạn WIP theo từng cột trên bảng</td>
+</tr>
+<tr>
+<td>Thay đổi giữa chu kỳ</td>
+<td>Hạn chế thay đổi Sprint Backlog giữa sprint đang chạy</td>
+<td>Có thể thêm việc mới bất cứ lúc nào miễn còn chỗ trống theo WIP limit</td>
+</tr>
+<tr>
+<td>Đo lường</td>
+<td>Velocity (số story point hoàn thành mỗi sprint)</td>
+<td>Lead time, Cycle time (thời gian một hạng mục đi từ đầu đến cuối bảng)</td>
+</tr>
+<tr>
+<td>Phù hợp nhất khi</td>
+<td>Công việc có thể nhóm thành các đợt giao hàng rõ ràng</td>
+<td>Công việc đến liên tục, không đều, khó nhóm thành đợt cố định (ví dụ: đội support, đội vận hành)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ví dụ thực tế</strong>: đội phát triển tính năng mới cho FoodNow (công việc có kế hoạch, có thể nhóm
+theo tính năng) thường hợp với Scrum hơn. Đội vận hành/bảo trì hệ thống FoodNow sau go-live (nhận
+yêu cầu sửa lỗi/hỗ trợ liên tục, không đều, khó đoán trước) thường hợp với Kanban hơn.</p>
+<h2>10.3 Vai trò BA trong Kanban</h2>
+<p>Vì Kanban không định nghĩa chu kỳ cố định, công việc của BA cũng liên tục hơn: thay vì có một giai
+đoạn &quot;refinement trước sprint&quot; rõ rệt như Scrum, BA cần đảm bảo luôn có sẵn một lượng hạng mục <strong>đã
+được làm rõ đầy đủ</strong> (&quot;ready&quot;) trong cột To Do, để đội không bao giờ bị đói việc rõ ràng để làm.
+Kỹ thuật MoSCoW/ưu tiên hoá (Chương 26) vẫn áp dụng được, chỉ khác ở chỗ ưu tiên được xem xét liên
+tục thay vì &quot;chốt&quot; một lần đầu mỗi sprint.</p>
+<h2>10.4 Bảng so sánh tổng hợp 4 mô hình</h2>
+<table>
+<thead>
+<tr>
+<th>Tiêu chí</th>
+<th>Waterfall</th>
+<th>Scrum</th>
+<th>Kanban</th>
+<th>XP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Loại</td>
+<td>Tuần tự</td>
+<td>Lặp (iterative), theo chu kỳ</td>
+<td>Luồng liên tục</td>
+<td>Tập thực hành kỹ thuật (thường kết hợp Scrum/Kanban)</td>
+</tr>
+<tr>
+<td>Tài liệu yêu cầu</td>
+<td>Đầy đủ, chốt trước khi code (SRS)</td>
+<td>Gọn, tinh chỉnh liên tục (User Story)</td>
+<td>Gọn, tinh chỉnh liên tục</td>
+<td>Acceptance Criteria đủ cụ thể để viết test</td>
+</tr>
+<tr>
+<td>Chấp nhận thay đổi</td>
+<td>Thấp — cần Change Request chính thức</td>
+<td>Trung bình — hạn chế đổi trong sprint đang chạy</td>
+<td>Cao — có thể đổi bất cứ lúc nào (trong giới hạn WIP)</td>
+<td>Cao, đi kèm Simple Design để dễ thích ứng</td>
+</tr>
+<tr>
+<td>Giao hàng</td>
+<td>Một lần, ở cuối dự án</td>
+<td>Từng sprint (1-4 tuần)</td>
+<td>Liên tục, ngay khi hạng mục hoàn thành</td>
+<td>Thường xuyên nhờ CI</td>
+</tr>
+<tr>
+<td>Phù hợp khi</td>
+<td>Yêu cầu ổn định, cần cam kết phạm vi/chi phí cố định</td>
+<td>Sản phẩm mới, cần phản hồi định kỳ theo đợt</td>
+<td>Công việc đến liên tục, không đều (support/vận hành)</td>
+<td>Cần chất lượng kỹ thuật cao, thay đổi thường xuyên</td>
+</tr>
+<tr>
+<td>Vai trò BA</td>
+<td>Rõ ràng theo giai đoạn, áp lực cao ở Requirements</td>
+<td>Làm việc sát PO, refine backlog liên tục</td>
+<td>Đảm bảo luôn có backlog &quot;ready&quot;, làm việc liên tục</td>
+<td>Gần vai trò &quot;on-site customer&quot;, phản hồi tức thời</td>
+</tr>
+</tbody>
+</table>
+<h2>10.5 Cách chọn mô hình cho một dự án cụ thể</h2>
+<p>Không có mô hình nào &quot;tốt nhất tuyệt đối&quot; — câu hỏi cần đặt ra:</p>
+<ol>
+<li><strong>Yêu cầu đã ổn định chưa, hay còn nhiều điều chưa biết?</strong> → Chưa ổn định: nghiêng về Agile
+(Scrum/Kanban/XP). Đã ổn định + cần cam kết chi phí cố định: cân nhắc Waterfall.</li>
+<li><strong>Công việc có thể nhóm thành đợt rõ ràng không, hay đến liên tục ngẫu nhiên?</strong> → Nhóm được
+thành đợt: Scrum. Đến liên tục, không đều: Kanban.</li>
+<li><strong>Có cần chất lượng kỹ thuật/tốc độ thích ứng rất cao không (sản phẩm cạnh tranh gắt)?</strong> → Cân
+nhắc bổ sung thực hành XP bên trong Scrum/Kanban.</li>
+<li><strong>Ràng buộc pháp lý/hợp đồng có đòi hỏi tài liệu hoá đầy đủ trước khi code không?</strong> → Nghiêng
+Waterfall hoặc mô hình lai (Chương 11 sẽ nói thêm về mô hình Hybrid).</li>
+</ol>
+<p>Với FoodNow: giai đoạn phát triển tính năng mới (chưa chắc chắn khách hàng phản ứng ra sao) hợp
+Scrum; giai đoạn vận hành sau go-live (xử lý bug, yêu cầu nhỏ liên tục) hợp Kanban.</p>
+<h2>Bài tập</h2>
+<ol>
+<li>Với đội vận hành hệ thống FoodNow sau go-live (nhận báo lỗi và yêu cầu nhỏ liên tục từ các chi
+nhánh), vẽ một bảng Kanban đơn giản (tối thiểu 4 cột) và đặt WIP limit hợp lý cho từng cột.</li>
+<li>Dùng 4 câu hỏi ở mục 10.5 để tự chọn mô hình phù hợp cho một dự án bạn biết hoặc đang làm.</li>
+</ol>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li><strong>Nghĩ Kanban là &quot;Scrum không có sprint&quot; — đơn giản hơn nên dễ làm hơn</strong>: Kanban đòi hỏi kỷ luật
+cao về giới hạn WIP, không có sự &quot;ép buộc&quot; bởi ranh giới sprint như Scrum — nhiều đội áp dụng sai
+vì không tuân thủ WIP limit, biến bảng Kanban thành danh sách việc không giới hạn.</li>
+<li><strong>Chọn mô hình theo trào lưu (&quot;ai cũng làm Scrum nên mình cũng làm&quot;)</strong>: nên chọn dựa trên đặc
+điểm công việc thực tế, theo 4 câu hỏi ở mục 10.5.</li>
+<li><strong>Trộn lẫn Scrum và Kanban mà không hiểu rõ đang đánh đổi gì</strong>: một số đội dùng &quot;Scrumban&quot; (lai
+giữa hai mô hình) hợp lý, nhưng cần hiểu rõ lý do, không phải trộn ngẫu nhiên vì không quyết được.</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<p>Kanban dựa trên luồng liên tục và giới hạn WIP, khác Scrum ở việc không có chu kỳ cố định. Không
+mô hình nào (Waterfall/Scrum/Kanban/XP) tốt tuyệt đối — việc chọn mô hình cần dựa trên đặc điểm
+công việc thực tế. Chương 11 sẽ tổng kết Phần 1 bằng cách đi sâu vào <strong>vai trò và trách nhiệm cụ
+thể của BA</strong> trong từng mô hình, giúp bạn biết chính xác cần làm gì khi vào một đội đã chọn sẵn
+một mô hình cụ thể.</p>
+
+</article>
+<div class="prev-next"><a class="prev" href="./ch09-extreme-programming-xp.html">&larr; 9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a><a class="next" href="./ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

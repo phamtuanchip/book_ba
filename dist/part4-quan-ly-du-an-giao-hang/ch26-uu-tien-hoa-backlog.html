@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="../part1-quy-trinh-phat-trien/ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class="active"><a href="./ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="./ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="./ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="./ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="./ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="./ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="../part7-phu-luc/appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="../part7-phu-luc/appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 26: Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Áp dụng được kỹ thuật MoSCoW để phân loại độ ưu tiên của yêu cầu.</li>
+<li>Hiểu và tính toán được điểm WSJF ở mức cơ bản để so sánh độ ưu tiên giữa các hạng mục.</li>
+<li>Phân loại được tính năng theo mô hình Kano (Basic, Performance, Excitement) để hiểu tác động đến
+sự hài lòng của khách hàng.</li>
+<li>Biết chọn kỹ thuật phù hợp cho từng tình huống.</li>
+</ul>
+<h2>26.1 Vì sao cần ưu tiên hoá?</h2>
+<p>Backlog của bất kỳ dự án nào cũng gần như luôn có <strong>nhiều việc hơn thời gian/nguồn lực có thể làm
+ngay</strong>. Ưu tiên hoá giúp trả lời câu hỏi quan trọng nhất trong quản lý sản phẩm: <strong>&quot;làm gì trước,
+làm gì sau, làm gì có thể không làm&quot;</strong> — dựa trên tiêu chí khách quan thay vì &quot;ai la to nhất được
+làm trước&quot;.</p>
+<h2>26.2 MoSCoW</h2>
+<p>Kỹ thuật đơn giản và phổ biến nhất, phân loại mỗi hạng mục vào 1 trong 4 nhóm:</p>
+<table>
+<thead>
+<tr>
+<th>Nhóm</th>
+<th>Ý nghĩa</th>
+<th>Ví dụ FoodNow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M — Must have</strong></td>
+<td>Bắt buộc phải có, thiếu thì sản phẩm không dùng được/không đạt mục tiêu tối thiểu</td>
+<td>Đặt món, thanh toán (US-101 đến US-104)</td>
+</tr>
+<tr>
+<td><strong>S — Should have</strong></td>
+<td>Quan trọng nhưng có thể tạm hoãn nếu thời gian gấp</td>
+<td>Xem lịch sử đơn hàng (US-203)</td>
+</tr>
+<tr>
+<td><strong>C — Could have</strong></td>
+<td>Có thì tốt, không có cũng không ảnh hưởng lớn</td>
+<td>Thông báo điểm sắp hết hạn (US-405)</td>
+</tr>
+<tr>
+<td><strong>W — Won't have (this time)</strong></td>
+<td>Đã cân nhắc nhưng quyết định KHÔNG làm ở phiên bản này</td>
+<td>Đặt bàn trước tại quán (xem BRD, mục &quot;Ngoài phạm vi&quot; — Chương 19)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nguyên tắc quan trọng</strong>: nhóm &quot;Must have&quot; nên chiếm <strong>tối đa 60% tổng khối lượng công việc</strong> —
+nếu mọi thứ đều được gắn nhãn &quot;Must have&quot;, nhãn đó mất hết ý nghĩa (không còn phân biệt được gì
+với gì). Đây là lỗi rất phổ biến khi PO/Sponsor không quen làm việc với MoSCoW.</p>
+<h2>26.3 WSJF (Weighted Shortest Job First)</h2>
+<p>MoSCoW tốt để phân loại nhanh nhưng không giúp so sánh <strong>định lượng</strong> giữa các hạng mục cùng nhóm
+&quot;Must have&quot;. <strong>WSJF</strong> giải quyết vấn đề này bằng công thức:</p>
+<blockquote>
+<p><strong>WSJF = Cost of Delay (Chi phí trì hoãn) ÷ Job Size (Độ lớn công việc)</strong></p>
+</blockquote>
+<p><strong>Cost of Delay</strong> thường được ước lượng bằng tổng của 3 yếu tố (mỗi yếu tố chấm điểm tương đối,
+ví dụ theo thang Fibonacci 1-2-3-5-8-13):</p>
+<ul>
+<li><strong>Giá trị kinh doanh</strong> (Business Value): mang lại lợi ích trực tiếp đến mức nào.</li>
+<li><strong>Mức độ khẩn cấp theo thời gian</strong> (Time Criticality): trì hoãn càng lâu, giá trị mất đi càng
+nhanh hay không (ví dụ: tính năng phục vụ mùa Tết mất giá trị hoàn toàn nếu làm xong sau Tết).</li>
+<li><strong>Giảm rủi ro/tạo cơ hội</strong> (Risk Reduction/Opportunity Enablement): làm sớm giúp giảm rủi ro
+hoặc mở ra cơ hội gì cho các hạng mục khác.</li>
+</ul>
+<h3>Ví dụ tính WSJF cho 2 hạng mục của FoodNow</h3>
+<table>
+<thead>
+<tr>
+<th>Hạng mục</th>
+<th>Giá trị kinh doanh</th>
+<th>Khẩn cấp thời gian</th>
+<th>Giảm rủi ro</th>
+<th>Tổng Cost of Delay</th>
+<th>Job Size</th>
+<th>WSJF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tích hợp cổng thanh toán VNPay</td>
+<td>8</td>
+<td>5</td>
+<td>8 (rủi ro kỹ thuật cao, nên làm sớm)</td>
+<td>21</td>
+<td>8</td>
+<td><strong>2.6</strong></td>
+</tr>
+<tr>
+<td>Thông báo điểm sắp hết hạn (US-405)</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>4</td>
+<td>3</td>
+<td><strong>1.3</strong></td>
+</tr>
+</tbody>
+</table>
+<p>WSJF càng cao, càng nên ưu tiên làm trước — ở đây, tích hợp cổng thanh toán (2.6) nên làm trước
+thông báo điểm sắp hết hạn (1.3), phù hợp với trực giác nhưng giờ có con số cụ thể để giải thích
+quyết định với stakeholder, thay vì chỉ dựa vào cảm tính.</p>
+<blockquote>
+<p>WSJF phổ biến trong các tổ chức áp dụng SAFe (Scaled Agile Framework — nhắc ở Chương 11), phù hợp
+khi cần so sánh định lượng giữa nhiều hạng mục lớn, đến từ nhiều đội khác nhau.</p>
+</blockquote>
+<h2>26.4 Mô hình Kano</h2>
+<p>MoSCoW và WSJF tập trung vào ưu tiên <strong>thời điểm làm</strong>, mô hình Kano tập trung vào <strong>tác động đến
+sự hài lòng của khách hàng</strong> — phân loại tính năng thành 3 nhóm:</p>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart TD
+    Basic[&quot;Basic (Cơ bản)&lt;br/&gt;Không có: khách hàng rất khó chịu&lt;br/&gt;Có: khách hàng coi là hiển nhiên,&lt;br/&gt;không tăng hài lòng thêm&quot;]
+    Perf[&quot;Performance (Hiệu năng)&lt;br/&gt;Càng tốt, khách hàng&lt;br/&gt;càng hài lòng — tỷ lệ thuận&quot;]
+    Excite[&quot;Excitement (Bất ngờ thích thú)&lt;br/&gt;Không có: khách hàng không để ý&lt;br/&gt;Có: gây bất ngờ, tăng hài lòng&lt;br/&gt;vượt trội&quot;]
+</pre></div>
+<table>
+<thead>
+<tr>
+<th>Nhóm Kano</th>
+<th>Ví dụ FoodNow</th>
+<th>Hàm ý cho ưu tiên hoá</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic</strong></td>
+<td>App phải đặt được hàng, thanh toán được — nếu lỗi, khách bỏ đi ngay</td>
+<td>Bắt buộc làm tốt, nhưng làm tốt hơn cũng không &quot;gây ấn tượng&quot; thêm — đầu tư vừa đủ, không quá tay</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Tốc độ tải trang, độ chính xác thời gian giao hàng dự kiến</td>
+<td>Càng đầu tư tối ưu, khách hàng càng hài lòng hơn theo tỷ lệ — đáng đầu tư liên tục</td>
+</tr>
+<tr>
+<td><strong>Excitement</strong></td>
+<td>Gợi ý món ăn dựa trên lịch sử đặt hàng, quà bất ngờ vào sinh nhật khách hàng</td>
+<td>Không bắt buộc nhưng tạo khác biệt cạnh tranh — cân nhắc làm sau khi đã vững phần Basic</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ứng dụng thực tế</strong>: nhiều đội mới làm sản phẩm mắc lỗi đầu tư quá nhiều vào tính năng
+&quot;Excitement&quot; (nghe hấp dẫn, dễ gây hứng thú khi brainstorm) trong khi tính năng &quot;Basic&quot; còn chưa ổn
+định — ví dụ FoodNow đầu tư tính năng gợi ý món ăn bằng AI trong khi app vẫn còn lỗi khi thanh
+toán — đây là sai lầm về thứ tự ưu tiên nghiêm trọng.</p>
+<h2>26.5 Kết hợp cả ba kỹ thuật trong thực tế</h2>
+<p>Quy trình thực chiến phổ biến:</p>
+<ol>
+<li>Dùng <strong>Kano</strong> để hiểu tác động của từng nhóm tính năng đến trải nghiệm khách hàng (làm 1 lần,
+mang tính định hướng chiến lược).</li>
+<li>Dùng <strong>MoSCoW</strong> để phân loại nhanh cho mỗi phiên bản/release cụ thể.</li>
+<li>Dùng <strong>WSJF</strong> khi cần so sánh định lượng giữa nhiều hạng mục cùng nằm trong nhóm &quot;Must have&quot;
+của MoSCoW, để quyết định thứ tự làm cụ thể.</li>
+</ol>
+<h2>Bài tập</h2>
+<ol>
+<li>Phân loại 6 User Story của Epic C (Chương trình khách hàng thân thiết, xem
+<code>templates/user-story-epic/FoodNow-UserStories.md</code>) theo MoSCoW — so sánh với mức ưu tiên đã gợi
+ý sẵn trong bảng, giải thích nếu bạn có ý kiến khác.</li>
+<li>Chọn 2 tính năng của FoodNow, tự chấm điểm Cost of Delay (3 yếu tố) và Job Size, tính WSJF theo
+công thức mục 26.3.</li>
+</ol>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li><strong>Gắn nhãn &quot;Must have&quot; cho gần như mọi thứ trong backlog</strong>: làm mất ý nghĩa phân loại — nên giới
+hạn nhóm Must have ở mức hợp lý (tối đa ~60%).</li>
+<li><strong>Chỉ dùng một kỹ thuật duy nhất cho mọi quyết định</strong>: mỗi kỹ thuật trả lời một câu hỏi khác nhau
+(thời điểm làm vs tác động hài lòng khách hàng) — nên kết hợp như gợi ý ở mục 26.5.</li>
+<li><strong>Đầu tư quá sớm vào tính năng Excitement khi tính năng Basic chưa ổn định</strong>: gây lãng phí nguồn
+lực và rủi ro mất khách hàng vì trải nghiệm cơ bản chưa tốt.</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<p>MoSCoW phân loại nhanh 4 nhóm ưu tiên, WSJF định lượng so sánh dựa trên chi phí trì hoãn và độ lớn
+công việc, mô hình Kano phân loại tác động đến sự hài lòng khách hàng (Basic/Performance/
+Excitement) — nên kết hợp cả ba tuỳ mục đích. Chương 27 sẽ đi sâu vào vai trò cụ thể của BA trong
+Sprint Planning và hoạt động &quot;backlog refinement&quot; diễn ra trước đó.</p>
+
+</article>
+<div class="prev-next"><a class="prev" href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">&larr; 25. Wireframe &amp; Prototype cơ bản cho BA</a><a class="next" href="./ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

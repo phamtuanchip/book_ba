@@ -1,0 +1,21 @@
+{
+  "name": "book_ba",
+  "version": "1.0.0",
+  "description": "Sách dạy nghề Business Analyst (BA) bằng tiếng Việt, từ SDLC/Agile/XP/Waterfall đến bộ tài liệu mẫu điền sẵn (BRD/PRD, SRS, Epic/User Story, Incremental Delivery Plan...).",
+  "main": "index.js",
+  "scripts": {
+    "build": "node tools/build.js",
+    "build:pdf": "node tools/build-pdf.js",
+    "build:all": "node tools/build.js && node tools/build-pdf.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "markdown-it": "^15.0.1"
+  },
+  "devDependencies": {
+    "puppeteer": "^25.10.0"
+  }
+}

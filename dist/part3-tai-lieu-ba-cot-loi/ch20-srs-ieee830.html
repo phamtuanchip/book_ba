@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="../part1-quy-trinh-phat-trien/ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="./ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class="active"><a href="./ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="./ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="./ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="./ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="./ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="./ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="../part7-phu-luc/appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="../part7-phu-luc/appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 20: SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Hiểu vị trí của SRS trong chuỗi tài liệu BRD → PRD → SRS.</li>
+<li>Nắm được cấu trúc chuẩn IEEE 830 (và biến thể thực tế thường dùng) cho SRS.</li>
+<li>Viết được yêu cầu chức năng chi tiết đủ để Dev hiện thực chính xác, không cần đoán thêm.</li>
+<li>Có sẵn mẫu SRS đầy đủ trong <code>templates/srs/</code> để tham khảo.</li>
+</ul>
+<h2>20.1 SRS là gì, vì sao cần chuẩn hoá?</h2>
+<p><strong>SRS (Software Requirements Specification)</strong> là tài liệu đặc tả <strong>chi tiết nhất</strong> về mặt chức
+năng và phi chức năng của phần mềm — đây là tài liệu mà Dev dựa vào để code, và QA dựa vào để viết
+test case. Nếu BRD/PRD (Chương 19) nói &quot;vì sao&quot; và &quot;cái gì ở mức khái niệm&quot;, SRS nói <strong>&quot;cụ thể như
+thế nào&quot;</strong> — đủ chi tiết để hai người Dev khác nhau đọc SRS và hiểu ra <strong>cùng một cách</strong>, không có
+khoảng trống để tự suy đoán khác nhau.</p>
+<p><strong>IEEE 830</strong> là chuẩn công nghiệp lâu đời (từ IEEE — Institute of Electrical and Electronics
+Engineers) định nghĩa cấu trúc và tiêu chí chất lượng cho SRS. Dù ra đời từ thời Waterfall thịnh
+hành, cấu trúc này vẫn hữu ích làm khung tham khảo, kể cả khi đội áp dụng Agile chỉ dùng một phần
+rút gọn của nó.</p>
+<h2>20.2 Cấu trúc chuẩn IEEE 830 (rút gọn, thực chiến)</h2>
+<ol>
+<li><strong>Giới thiệu (Introduction)</strong>
+<ul>
+<li>Mục đích tài liệu, phạm vi sản phẩm, định nghĩa thuật ngữ viết tắt, tài liệu tham chiếu (liên
+kết ngược về BRD/PRD).</li>
+</ul>
+</li>
+<li><strong>Mô tả tổng quan (Overall Description)</strong>
+<ul>
+<li>Bối cảnh sản phẩm, các chức năng chính, đặc điểm người dùng, các ràng buộc chung, giả định.</li>
+</ul>
+</li>
+<li><strong>Yêu cầu cụ thể (Specific Requirements)</strong> — phần quan trọng và dài nhất:
+<ul>
+<li><strong>Yêu cầu chức năng (Functional Requirements)</strong>: mô tả từng chức năng, thường tổ chức theo
+use case hoặc theo module — mỗi yêu cầu có ID riêng để truy vết (Chương 16).</li>
+<li><strong>Yêu cầu giao diện bên ngoài (External Interface Requirements)</strong>: giao diện người dùng, giao
+diện phần cứng (nếu có), giao diện phần mềm khác (API bên thứ ba như cổng thanh toán).</li>
+<li><strong>Yêu cầu phi chức năng (Non-functional Requirements)</strong>: hiệu năng, bảo mật, độ tin cậy, khả
+năng bảo trì (chi tiết đầy đủ ở Chương 21).</li>
+</ul>
+</li>
+<li><strong>Phụ lục</strong>: mô hình dữ liệu sơ bộ, sơ đồ hỗ trợ (liên hệ Chương 15), bảng thuật ngữ.</li>
+</ol>
+<h2>20.3 Nguyên tắc viết yêu cầu chức năng chất lượng cao</h2>
+<p>Áp dụng lại bộ tiêu chí Verification đã học ở Chương 17 (rõ ràng, đầy đủ, nhất quán, khả thi, đo
+lường được, truy vết được), cộng thêm các nguyên tắc riêng cho SRS:</p>
+<ul>
+<li><strong>Mỗi yêu cầu có ID duy nhất</strong>: ví dụ <code>FR-CART-01</code> (Functional Requirement, module Cart, số 01)
+— giúp truy vết trong RTM và tham chiếu khi trao đổi (Dev có thể hỏi &quot;FR-CART-03 nghĩa là gì?&quot;
+thay vì mô tả dài dòng lại).</li>
+<li><strong>Một yêu cầu, một hành vi</strong>: tránh gộp nhiều hành vi vào một câu bằng chữ &quot;và&quot; — nếu một trong
+hai phần thay đổi/cần test riêng, việc gộp chung gây khó theo dõi.</li>
+<li><strong>Ưu tiên câu chủ động, chủ ngữ rõ ràng</strong>: &quot;Hệ thống PHẢI gửi email xác nhận...&quot; rõ ràng hơn
+&quot;Email xác nhận sẽ được gửi...&quot; (câu bị động dễ làm mất chủ thể chịu trách nhiệm).</li>
+<li><strong>Nêu rõ điều kiện và trường hợp ngoại lệ</strong>: không chỉ mô tả &quot;đường đi thành công&quot; (happy path)
+mà cả các trường hợp lỗi/ngoại lệ (liên hệ Activity Diagram — Chương 15).</li>
+</ul>
+<h3>Ví dụ: yêu cầu viết kém vs viết tốt</h3>
+<p><strong>Viết kém</strong>: &quot;Khách hàng có thể thanh toán online.&quot;</p>
+<p><strong>Viết tốt</strong> (FR-PAY-01): &quot;Hệ thống PHẢI cho phép khách hàng thanh toán bằng thẻ nội địa/quốc tế
+hoặc ví điện tử (MoMo, ZaloPay) thông qua cổng thanh toán tích hợp. Nếu giao dịch thất bại, hệ
+thống PHẢI hiển thị thông báo lỗi rõ ràng và cho phép khách hàng thử lại hoặc chọn phương thức
+thanh toán khác, không được huỷ giỏ hàng đã chọn.&quot;</p>
+<h2>20.4 Mối quan hệ SRS — Use Case — User Story</h2>
+<p>Nhiều người mới nhầm lẫn SRS với Use Case Specification (Chương 22) hoặc User Story (Chương 23).
+Phân biệt:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>SRS</th>
+<th>Use Case Spec</th>
+<th>User Story</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mức chi tiết</td>
+<td>Đặc tả đầy đủ cả module/hệ thống</td>
+<td>Đặc tả một luồng tương tác cụ thể (actor - hệ thống)</td>
+<td>Mô tả ngắn gọn một nhu cầu, dưới góc nhìn người dùng</td>
+</tr>
+<tr>
+<td>Định dạng</td>
+<td>Văn bản đặc tả có cấu trúc, ID hoá</td>
+<td>Các bước tương tác (main flow, alternate flow)</td>
+<td>&quot;Là [vai trò], tôi muốn [nhu cầu], để [lợi ích]&quot;</td>
+</tr>
+<tr>
+<td>Phù hợp mô hình</td>
+<td>Waterfall, dự án lớn cần tài liệu hoá đầy đủ</td>
+<td>Cả hai, thường đi kèm SRS ở dự án Waterfall</td>
+<td>Agile (Scrum/Kanban)</td>
+</tr>
+</tbody>
+</table>
+<p>Trong thực tế, một SRS đầy đủ <strong>có thể chứa nhiều Use Case Specification</strong> làm chi tiết bổ sung
+cho từng luồng nghiệp vụ phức tạp.</p>
+<h2>20.5 Mẫu tài liệu đầy đủ cho FoodNow</h2>
+<p>Một bản SRS đầy đủ theo cấu trúc IEEE 830, điền sẵn cho module &quot;Đặt món &amp; Thanh toán&quot; của FoodNow
+App, được lưu tại:</p>
+<blockquote>
+<p><strong><code>templates/srs/FoodNow-SRS.md</code></strong></p>
+</blockquote>
+<p>Xem thêm bản đầy đủ tại Phụ lục B (cuối sách).</p>
+<h2>Bài tập</h2>
+<ol>
+<li>Viết lại yêu cầu sau theo đúng nguyên tắc ở mục 20.3 (có ID, rõ ràng, có trường hợp ngoại lệ):
+&quot;Khách hàng nhận thông báo khi đơn hàng được giao.&quot;</li>
+<li>Mở <code>templates/srs/FoodNow-SRS.md</code>, chọn 1 yêu cầu chức năng bất kỳ, thử viết 2 test case (Chương
+34 sẽ nói kỹ hơn về viết test case) để xác nhận yêu cầu đó đã được hiện thực đúng.</li>
+</ol>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li><strong>Viết SRS như một bản sao chép PRD, chỉ dài hơn</strong>: SRS cần đi sâu đến mức chi tiết Dev không
+cần hỏi lại — nếu chỉ lặp lại ý PRD với câu chữ dài hơn, không tạo thêm giá trị.</li>
+<li><strong>Bỏ qua yêu cầu giao diện bên ngoài (External Interface)</strong>: quên mô tả rõ tích hợp với hệ thống
+bên thứ ba (cổng thanh toán, SMS OTP) — nguồn gốc phổ biến của lỗi tích hợp phát hiện muộn.</li>
+<li><strong>Không đánh ID cho từng yêu cầu</strong>: khiến việc truy vết (RTM — Chương 16) và trao đổi giữa các
+bên trở nên khó khăn, dễ nhầm lẫn đang nói về yêu cầu nào.</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<p>SRS đặc tả chi tiết nhất về chức năng và phi chức năng của phần mềm theo chuẩn IEEE 830 (hoặc biến
+thể rút gọn), là tài liệu Dev/QA dựa vào trực tiếp để làm việc — cần viết rõ ràng, có ID, có
+trường hợp ngoại lệ. Chương 21 sẽ đi sâu vào phần dễ bị viết sơ sài nhất của SRS: <strong>yêu cầu phi
+chức năng (Non-functional Requirements)</strong> và FRD.</p>
+
+</article>
+<div class="prev-next"><a class="prev" href="./ch19-brd-prd.html">&larr; 19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a><a class="next" href="./ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability) &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow) — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="../part1-quy-trinh-phat-trien/ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="./appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="./appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class="active"><a href="./appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="./appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="./appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="./appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Phụ lục C: Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</h1>
+<blockquote>
+<p>Nội dung dưới đây in lại đầy đủ từ file mẫu gốc: <code>templates/user-story-epic/FoodNow-UserStories.md</code>.
+Xem cách phân rã Epic thành User Story tại Chương 24, cách viết Acceptance Criteria tại Chương 23,
+và cách ưu tiên hoá tại Chương 26.</p>
+</blockquote>
+<hr>
+<h2>Epic A: Đặt món &amp; Thanh toán</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>User Story</th>
+<th>Ưu tiên</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US-101</td>
+<td>Là khách hàng, tôi muốn xem thực đơn theo danh mục, để dễ dàng tìm món tôi muốn ăn</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>US-102</td>
+<td>Là khách hàng, tôi muốn thêm/sửa/xoá món trong giỏ hàng, để tôi kiểm soát đúng đơn hàng trước khi thanh toán</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>US-103</td>
+<td>Là khách hàng, tôi muốn chọn giao tận nơi hoặc lấy tại quán, để phù hợp với nhu cầu của tôi lúc đó</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>US-104</td>
+<td>Là khách hàng, tôi muốn thanh toán bằng thẻ hoặc ví điện tử, để tôi không cần chuẩn bị tiền mặt</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>US-105</td>
+<td>Là khách hàng, tôi muốn thanh toán khi nhận hàng (COD), để tôi yên tâm khi chưa quen với thanh toán online</td>
+<td>Should have</td>
+</tr>
+<tr>
+<td>US-106</td>
+<td>Là khách hàng, tôi muốn áp dụng mã giảm giá khi thanh toán, để tôi tiết kiệm chi phí</td>
+<td>Must have</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Acceptance Criteria mẫu cho US-106</strong> (xem đầy đủ tại Chương 23, mục 23.3):</p>
+<pre><code class="language-gherkin">Scenario 1: Áp dụng mã giảm giá hợp lệ
+  Given giỏ hàng có tổng giá trị 200.000đ
+  And mã giảm giá &quot;FOODNOW10&quot; đang có hiệu lực, giảm 10%
+  When khách hàng nhập mã &quot;FOODNOW10&quot; và bấm Áp dụng
+  Then tổng tiền thanh toán giảm còn 180.000đ
+  And hệ thống hiển thị thông báo &quot;Đã áp dụng mã giảm giá FOODNOW10&quot;
+
+Scenario 2: Nhập mã giảm giá đã hết hạn
+  Given mã giảm giá &quot;TET2024&quot; đã hết hạn sử dụng
+  When khách hàng nhập mã &quot;TET2024&quot; và bấm Áp dụng
+  Then hệ thống hiển thị thông báo lỗi &quot;Mã giảm giá đã hết hạn&quot;
+  And tổng tiền thanh toán không thay đổi
+
+Scenario 3: Nhập mã giảm giá thứ hai sau khi đã áp dụng một mã
+  Given khách hàng đã áp dụng thành công mã &quot;FOODNOW10&quot;
+  When khách hàng nhập thêm mã &quot;SUMMER5&quot; và bấm Áp dụng
+  Then hệ thống hiển thị thông báo &quot;Chỉ được áp dụng 1 mã giảm giá cho mỗi đơn hàng&quot;
+  And mã &quot;FOODNOW10&quot; vẫn được giữ nguyên hiệu lực
+</code></pre>
+<h2>Epic B: Theo dõi đơn hàng</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>User Story</th>
+<th>Ưu tiên</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US-201</td>
+<td>Là khách hàng, tôi muốn xem trạng thái đơn hàng theo thời gian thực, để tôi biết khi nào đồ ăn sẽ đến</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>US-202</td>
+<td>Là khách hàng, tôi muốn nhận thông báo đẩy khi trạng thái đơn hàng thay đổi, để tôi không cần liên tục mở app kiểm tra</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>US-203</td>
+<td>Là khách hàng, tôi muốn xem lịch sử các đơn hàng đã đặt, để tôi có thể đặt lại nhanh chóng</td>
+<td>Should have</td>
+</tr>
+<tr>
+<td>US-204</td>
+<td>Là khách hàng, tôi muốn huỷ đơn hàng trong vòng 2 phút sau khi đặt, để tôi có thể sửa sai nếu đặt nhầm</td>
+<td>Should have</td>
+</tr>
+</tbody>
+</table>
+<h2>Epic C: Chương trình khách hàng thân thiết</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>User Story</th>
+<th>Ưu tiên</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US-401</td>
+<td>Là khách hàng, tôi muốn được tự động tích điểm sau mỗi đơn hàng thành công, để tôi tích luỹ dần</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>US-402</td>
+<td>Là khách hàng, tôi muốn xem số điểm hiện có, để biết mình còn bao nhiêu điểm</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>US-403</td>
+<td>Là khách hàng, tôi muốn xem lịch sử tích/đổi điểm, để kiểm tra lại giao dịch</td>
+<td>Should have</td>
+</tr>
+<tr>
+<td>US-404</td>
+<td>Là khách hàng, tôi muốn đổi điểm lấy mã giảm giá, để tiết kiệm chi phí đơn hàng tiếp theo</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>US-405</td>
+<td>Là khách hàng, tôi muốn nhận thông báo khi điểm sắp hết hạn, để không bỏ lỡ cơ hội dùng</td>
+<td>Could have</td>
+</tr>
+<tr>
+<td>US-406</td>
+<td>Là Ban giám đốc, tôi muốn xem báo cáo tổng điểm đã phát hành/đã đổi theo tháng, để đánh giá hiệu quả</td>
+<td>Should have</td>
+</tr>
+</tbody>
+</table>
+<h2>Epic D: Quản trị đơn hàng (dành cho nhân viên chi nhánh)</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>User Story</th>
+<th>Ưu tiên</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US-301</td>
+<td>Là nhân viên chi nhánh, tôi muốn nhận thông báo ngay khi có đơn hàng mới, để tôi xử lý kịp thời</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>US-302</td>
+<td>Là nhân viên chi nhánh, tôi muốn xác nhận hoặc từ chối đơn hàng kèm lý do, để khách hàng biết trạng thái đơn của họ</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>US-303</td>
+<td>Là nhân viên chi nhánh, tôi muốn cập nhật trạng thái xử lý đơn hàng, để khách hàng theo dõi được</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>US-304</td>
+<td>Là quản lý chi nhánh, tôi muốn xem báo cáo doanh thu và số đơn theo ngày/tuần/tháng, để theo dõi hiệu quả kinh doanh</td>
+<td>Should have</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+<div class="prev-next"><a class="prev" href="./appendix-b-mau-srs-day-du.html">&larr; Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a><a class="next" href="./appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow) &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

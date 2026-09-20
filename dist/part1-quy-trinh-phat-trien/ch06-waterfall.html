@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class="active"><a href="./ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="./ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="./ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="./ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="./ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="./ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="../part7-phu-luc/appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="../part7-phu-luc/appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 6: Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Mô tả được đặc điểm cốt lõi của mô hình Waterfall.</li>
+<li>Vẽ và giải thích được sơ đồ các giai đoạn Waterfall áp dụng cho một dự án cụ thể.</li>
+<li>Liệt kê ưu và nhược điểm của Waterfall, và biết trong tình huống nào Waterfall vẫn là lựa chọn
+hợp lý — không phải mô hình &quot;lỗi thời&quot; như nhiều tài liệu Agile vẫn ngầm ám chỉ.</li>
+</ul>
+<h2>6.1 Waterfall là gì?</h2>
+<p><strong>Waterfall</strong> (mô hình thác nước) áp dụng đúng 6 giai đoạn SDLC (Chương 2) theo thứ tự <strong>tuần
+tự, hoàn thành hẳn giai đoạn trước mới sang giai đoạn sau</strong>, giống nước chảy từ bậc thang cao
+xuống thấp — không chảy ngược lại.</p>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart TD
+    P[&quot;Planning&lt;br/&gt;(2-4 tuần)&quot;] --&gt; R[&quot;Requirements&lt;br/&gt;(3-6 tuần)&quot;]
+    R --&gt; D[&quot;Design&lt;br/&gt;(3-6 tuần)&quot;]
+    D --&gt; I[&quot;Implementation&lt;br/&gt;(nhiều tháng)&quot;]
+    I --&gt; T[&quot;Testing&lt;br/&gt;(3-6 tuần)&quot;]
+    T --&gt; M[&quot;Deployment&lt;br/&gt;(1-2 tuần)&quot;]
+</pre></div>
+<p>Đặc điểm cốt lõi: <strong>tài liệu yêu cầu (SRS — Chương 20) được &quot;chốt&quot; (sign-off) trước khi bắt đầu
+Design</strong>, và Design được chốt trước khi bắt đầu code. Mọi thay đổi sau khi chốt phải đi qua quy
+trình Change Request chính thức (Chương 18) — thường tốn thời gian và cần phê duyệt lại từ Sponsor.</p>
+<h2>6.2 Ví dụ Waterfall áp dụng cho FoodNow</h2>
+<p>Nếu FoodNow chọn làm theo Waterfall:</p>
+<ol>
+<li><strong>Planning</strong>: Ban giám đốc phê duyệt ngân sách và mục tiêu tổng thể (giảm phụ thuộc app bên thứ
+ba, xây dữ liệu khách hàng riêng).</li>
+<li><strong>Requirements</strong>: BA phỏng vấn toàn bộ stakeholder (ban giám đốc, quản lý chi nhánh, nhân viên
+giao hàng), viết BRD và SRS đầy đủ cho <strong>toàn bộ phạm vi app</strong> (đặt hàng, thanh toán, theo dõi
+đơn, chương trình khách hàng thân thiết) — tài liệu này được review và <strong>ký duyệt</strong> trước khi
+sang bước tiếp theo.</li>
+<li><strong>Design</strong>: kiến trúc sư thiết kế toàn bộ hệ thống, Designer thiết kế toàn bộ giao diện dựa trên
+SRS đã chốt.</li>
+<li><strong>Implementation</strong>: Dev code toàn bộ tính năng trong nhiều tháng, không có tính năng nào ra mắt
+cho người dùng thật cho đến khi xong hết.</li>
+<li><strong>Testing</strong>: QA kiểm thử toàn bộ hệ thống một lượt.</li>
+<li><strong>Deployment</strong>: ra mắt app hoàn chỉnh một lần duy nhất.</li>
+</ol>
+<p>Điểm quan trọng: nếu ở tháng thứ 4 (đang Implementation), ban giám đốc <strong>đổi ý</strong> muốn thêm tính
+năng đặt bàn tại quán (một nhu cầu không có trong SRS ban đầu) — yêu cầu này phải qua Change
+Request, có thể làm trễ toàn bộ tiến độ vì nhiều phần thiết kế/code đã dựa trên phạm vi cũ.</p>
+<h2>6.3 Ưu điểm</h2>
+<ul>
+<li><strong>Rõ ràng, dễ lập kế hoạch và ước tính ngân sách</strong> trước khi bắt đầu — phù hợp khi cần cam kết
+ngân sách/thời gian cố định với khách hàng (hợp đồng fixed-price).</li>
+<li><strong>Tài liệu hoá đầy đủ</strong>: hữu ích cho các ngành yêu cầu tuân thủ quy định nghiêm ngặt (Banking,
+Y tế, Hàng không) — cần hồ sơ đầy đủ cho kiểm toán/audit.</li>
+<li><strong>Phù hợp khi yêu cầu đã ổn định, ít khả năng thay đổi</strong>: ví dụ dự án thay thế một hệ thống cũ
+bằng công nghệ mới nhưng nghiệp vụ giữ nguyên y hệt.</li>
+<li><strong>Dễ quản lý với đội phân tán nhiều nhà thầu phụ</strong>: mỗi giai đoạn có bàn giao (deliverable) rõ
+ràng, dễ phân định trách nhiệm giữa các bên.</li>
+</ul>
+<h2>6.4 Nhược điểm</h2>
+<ul>
+<li><strong>Phát hiện sai sót quá muộn</strong>: như sơ đồ chi phí ở Chương 2, nếu SRS hiểu sai một yêu cầu quan
+trọng, phải đến giai đoạn Testing (sau nhiều tháng) mới phát hiện ra.</li>
+<li><strong>Không linh hoạt với thay đổi</strong>: thị trường/nghiệp vụ thay đổi trong lúc dự án đang chạy (điều
+rất phổ biến với sản phẩm mới) sẽ khiến SRS &quot;lỗi thời&quot; trước khi kịp ra mắt.</li>
+<li><strong>Không có giá trị nghiệp vụ nào được tạo ra cho đến khi xong toàn bộ</strong>: FoodNow phải chờ hết cả
+dự án (có thể 6-9 tháng) mới có bất kỳ tính năng nào dùng được, thay vì có thể ra mắt sớm tính
+năng đặt hàng cơ bản trước.</li>
+<li><strong>Áp lực lớn lên giai đoạn Requirements</strong>: vì mọi thứ dựa trên SRS đã chốt, BA chịu áp lực phải
+&quot;đúng ngay từ đầu&quot; — điều gần như không tưởng với sản phẩm hoàn toàn mới, thị trường chưa rõ.</li>
+</ul>
+<h2>6.5 Khi nào Waterfall vẫn là lựa chọn hợp lý?</h2>
+<p>Trái với quan niệm phổ biến &quot;Waterfall đã lỗi thời, Agile luôn tốt hơn&quot;, Waterfall vẫn phù hợp khi:</p>
+<ul>
+<li>Yêu cầu <strong>đã rõ ràng và ổn định</strong> (ví dụ: hệ thống thay thế phần mềm kế toán cũ bằng công nghệ
+mới, nghiệp vụ kế toán không đổi).</li>
+<li>Hợp đồng dạng <strong>fixed-price, fixed-scope</strong> với bên thứ ba — cần cam kết phạm vi/chi phí rõ ràng
+ngay từ đầu.</li>
+<li>Ngành có <strong>yêu cầu tuân thủ pháp lý nghiêm ngặt</strong> đòi hỏi tài liệu hoá đầy đủ trước khi triển
+khai (một số hệ thống trong ngành tài chính, dược phẩm, hàng không).</li>
+<li>Dự án <strong>quy mô nhỏ, rủi ro thấp</strong>, không cần lặp lại nhiều vòng phản hồi.</li>
+</ul>
+<p>Chương 10 sẽ có bảng so sánh đầy đủ hơn giữa Waterfall và các mô hình Agile để giúp bạn (hoặc đội
+dự án) chọn mô hình phù hợp cho từng tình huống cụ thể.</p>
+<h2>Bài tập</h2>
+<ol>
+<li>Với dự án FoodNow, giả sử ban giám đốc yêu cầu cam kết ngân sách và thời gian cố định trước khi
+ký hợp đồng với đội phát triển thuê ngoài. Waterfall có phù hợp trong tình huống này không? Giải
+thích bằng 2 lý do dựa trên mục 6.5.</li>
+<li>Liệt kê 2 rủi ro cụ thể nếu FoodNow chọn Waterfall nhưng thị trường giao đồ ăn thay đổi nhanh
+(đối thủ ra tính năng mới) trong lúc dự án đang ở giai đoạn Implementation.</li>
+</ol>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li><strong>Coi Waterfall là &quot;làm không có kế hoạch gì thêm sau khi ký SRS&quot;</strong>: Waterfall vẫn cần quy trình
+Change Request để xử lý thay đổi phát sinh — không phải &quot;đóng băng hoàn toàn&quot; mà là &quot;thay đổi có
+kiểm soát, có phê duyệt&quot; (Chương 18).</li>
+<li><strong>Áp dụng Waterfall cho sản phẩm hoàn toàn mới, thị trường chưa rõ</strong>: rủi ro rất cao vì không có
+cơ chế học hỏi và điều chỉnh sớm — nên cân nhắc Agile (Chương 7) trong tình huống này.</li>
+<li><strong>Nghĩ BA hết việc sau khi SRS được ký</strong>: BA vẫn cần theo sát Design/Implementation/Testing để xử
+lý các câu hỏi làm rõ phát sinh, dù phạm vi đã chốt.</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<p>Waterfall làm tuần tự, hoàn thành hẳn từng giai đoạn SDLC trước khi sang giai đoạn tiếp theo — rõ
+ràng, dễ lập kế hoạch, nhưng phát hiện sai sót muộn và kém linh hoạt. Phù hợp khi yêu cầu ổn định
+hoặc cần cam kết phạm vi/chi phí cố định. Chương 7 sẽ giới thiệu triết lý hoàn toàn khác: Agile —
+ra đời chính là để giải quyết những nhược điểm của Waterfall.</p>
+
+</article>
+<div class="prev-next"><a class="prev" href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">&larr; 5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a><a class="next" href="./ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

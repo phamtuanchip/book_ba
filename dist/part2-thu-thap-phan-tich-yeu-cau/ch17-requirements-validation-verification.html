@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>17. Requirements Validation &amp; Verification — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="../part1-quy-trinh-phat-trien/ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="./ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="./ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="./ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="./ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="./ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class="active"><a href="./ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="./ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="../part7-phu-luc/appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="../part7-phu-luc/appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 17: Requirements Validation &amp; Verification</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Phân biệt rõ ràng Validation (&quot;có đúng vấn đề cần giải quyết không&quot;) và Verification (&quot;tài liệu
+có viết đúng chuẩn, đủ rõ ràng không&quot;) — hai khái niệm rất dễ nhầm vì tên gọi gần giống nhau.</li>
+<li>Áp dụng được bộ tiêu chí kiểm tra chất lượng một yêu cầu tốt.</li>
+<li>Biết cách tổ chức một buổi review yêu cầu hiệu quả.</li>
+</ul>
+<h2>17.1 Validation vs Verification — khác nhau ở đâu?</h2>
+<p>Đây là cặp khái niệm gây nhầm lẫn nhiều nhất trong BABOK vì tên tiếng Anh gần giống nhau. Cách nhớ
+đơn giản nhất, dùng hai câu hỏi:</p>
+<ul>
+<li><strong>Verification — &quot;Are we building it right?&quot;</strong> (Chúng ta có đang xây <strong>đúng cách</strong> không?):
+kiểm tra yêu cầu có được viết rõ ràng, đầy đủ, nhất quán, không mâu thuẫn — kiểm tra <strong>chất
+lượng của bản thân tài liệu</strong>, không quan tâm nó có giải quyết đúng vấn đề nghiệp vụ hay không.</li>
+<li><strong>Validation — &quot;Are we building the right thing?&quot;</strong> (Chúng ta có đang xây <strong>đúng thứ</strong> không?):
+kiểm tra yêu cầu (dù viết rõ ràng hay không) có thực sự giải quyết đúng vấn đề nghiệp vụ, đúng
+mong đợi của stakeholder hay không.</li>
+</ul>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    Req[&quot;Yêu cầu đã viết&quot;] --&gt; V1{&quot;Verification:&lt;br/&gt;Viết có rõ ràng,&lt;br/&gt;đầy đủ, nhất quán?&quot;}
+    V1 --&gt;|Không đạt| FixDoc[&quot;Sửa lại cách viết&quot;]
+    FixDoc --&gt; V1
+    V1 --&gt;|Đạt| V2{&quot;Validation:&lt;br/&gt;Có đúng vấn đề&lt;br/&gt;nghiệp vụ cần giải quyết?&quot;}
+    V2 --&gt;|Không đạt| BackElicit[&quot;Quay lại elicitation,&lt;br/&gt;làm rõ với stakeholder&quot;]
+    BackElicit --&gt; Req
+    V2 --&gt;|Đạt| Approved[&quot;Yêu cầu được&lt;br/&gt;xác nhận, sẵn sàng&lt;br/&gt;cho giai đoạn sau&quot;]
+</pre></div>
+<p><strong>Ví dụ minh hoạ khác biệt</strong>: yêu cầu &quot;Hệ thống phải cho phép khách hàng huỷ đơn hàng bất cứ lúc
+nào, kể cả khi đã giao xong&quot; — yêu cầu này có thể <strong>verify đạt</strong> (viết rõ ràng, không mơ hồ, dùng
+đúng thuật ngữ) nhưng <strong>validate không đạt</strong> (về mặt nghiệp vụ, cho phép huỷ đơn sau khi đã giao
+xong là vô lý, gây thiệt hại cho nhà hàng — rõ ràng đây là lỗi hiểu sai ý định thật của
+stakeholder, cần quay lại elicitation làm rõ).</p>
+<h2>17.2 Bộ tiêu chí Verification — thế nào là một yêu cầu viết tốt?</h2>
+<table>
+<thead>
+<tr>
+<th>Tiêu chí</th>
+<th>Giải thích</th>
+<th>Ví dụ VI PHẠM</th>
+<th>Sửa lại</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rõ ràng (Unambiguous)</strong></td>
+<td>Chỉ hiểu theo một nghĩa duy nhất</td>
+<td>&quot;Hệ thống phải nhanh&quot;</td>
+<td>&quot;Trang chủ tải xong trong dưới 2 giây với kết nối 4G&quot;</td>
+</tr>
+<tr>
+<td><strong>Đầy đủ (Complete)</strong></td>
+<td>Không thiếu thông tin cần thiết để hiện thực</td>
+<td>&quot;Gửi email xác nhận đơn hàng&quot; (gửi khi nào? nội dung gì?)</td>
+<td>&quot;Ngay sau khi thanh toán thành công, gửi email xác nhận gồm: mã đơn hàng, danh sách món, tổng tiền, thời gian giao dự kiến&quot;</td>
+</tr>
+<tr>
+<td><strong>Nhất quán (Consistent)</strong></td>
+<td>Không mâu thuẫn với yêu cầu khác trong cùng tài liệu</td>
+<td>Yêu cầu A nói &quot;tối đa 5 món/đơn&quot;, yêu cầu B (cùng tài liệu) nói &quot;không giới hạn số món&quot;</td>
+<td>Rà soát và thống nhất lại với stakeholder trước khi chốt</td>
+</tr>
+<tr>
+<td><strong>Khả thi (Feasible)</strong></td>
+<td>Có thể hiện thực được trong ràng buộc thời gian/ngân sách/công nghệ</td>
+<td>&quot;Giao hàng trong vòng 5 phút mọi lúc, mọi nơi&quot;</td>
+<td>&quot;Giao hàng trong vòng 30 phút trong bán kính 5km, với các đơn đặt trong giờ hoạt động&quot;</td>
+</tr>
+<tr>
+<td><strong>Đo lường được (Measurable/Testable)</strong></td>
+<td>Có thể viết được test case để xác nhận đạt/không đạt</td>
+<td>&quot;Giao diện phải đẹp&quot;</td>
+<td>&quot;Giao diện tuân thủ bộ nhận diện thương hiệu FoodNow (màu, font đính kèm ở Phụ lục), đã được Designer duyệt&quot;</td>
+</tr>
+<tr>
+<td><strong>Có thể truy vết (Traceable)</strong></td>
+<td>Có thể liên kết lên nguồn gốc và xuống đến thiết kế/test (liên hệ Chương 16)</td>
+<td>Yêu cầu xuất hiện đột ngột, không rõ ai yêu cầu, để làm gì</td>
+<td>Ghi rõ nguồn: &quot;Theo yêu cầu của Phòng Marketing trong workshop ngày X&quot;</td>
+</tr>
+</tbody>
+</table>
+<h2>17.3 Kỹ thuật kiểm tra Validation</h2>
+<p>Verification có thể tự BA làm một mình (đọc lại, đối chiếu tiêu chí). Validation <strong>bắt buộc cần có
+sự tham gia của stakeholder</strong> — không thể tự BA &quot;tự xác nhận&quot; yêu cầu là đúng vấn đề nghiệp vụ:</p>
+<ul>
+<li><strong>Review trực tiếp với stakeholder</strong>: trình bày lại yêu cầu bằng ngôn ngữ của họ (không phải
+ngôn ngữ kỹ thuật), hỏi &quot;đây có đúng ý anh/chị không?&quot;</li>
+<li><strong>Prototype/Wireframe</strong> (Chương 25): cho stakeholder xem hình ảnh cụ thể thay vì chỉ đọc văn bản
+— nhiều người validate chính xác hơn khi nhìn thấy giao diện thay vì đọc mô tả trừu tượng.</li>
+<li><strong>Walkthrough kịch bản cụ thể</strong>: đi qua từng bước một tình huống thực tế (&quot;giả sử khách đặt 3 món,
+1 món hết hàng giữa chừng, thì...&quot;) để kiểm tra yêu cầu có xử lý đúng các trường hợp thật.</li>
+</ul>
+<h2>17.4 Tổ chức một buổi review yêu cầu hiệu quả</h2>
+<ol>
+<li><strong>Gửi tài liệu trước ít nhất 1-2 ngày</strong>: để người tham dự có thời gian đọc trước, buổi họp dùng
+để thảo luận sâu chứ không phải đọc lần đầu tại chỗ.</li>
+<li><strong>Xác định rõ mục tiêu buổi review</strong>: verification (rà soát cách viết) hay validation (xác nhận
+đúng vấn đề nghiệp vụ) — hai mục tiêu này cần cách tổ chức khác nhau, verification có thể làm
+qua checklist nhanh, validation cần thảo luận sâu với đúng stakeholder có thẩm quyền.</li>
+<li><strong>Dùng checklist tiêu chí (mục 17.2)</strong> làm khung thảo luận, tránh review lan man không có cấu trúc.</li>
+<li><strong>Ghi nhận mọi phản hồi, kể cả chưa thống nhất được ngay</strong>: đưa vào danh sách vấn đề mở
+(open items), phân công người theo dõi, hạn chốt.</li>
+<li><strong>Không rời phòng họp mà không có quyết định rõ ràng</strong>: mỗi yêu cầu được review nên có 1 trong
+3 trạng thái cuối: Chấp nhận, Cần sửa (có ghi rõ sửa gì), hoặc Cần làm rõ thêm (có ghi rõ ai sẽ
+làm rõ, khi nào).</li>
+</ol>
+<h2>Bài tập</h2>
+<ol>
+<li>Cho yêu cầu: &quot;Hệ thống phải bảo mật tốt.&quot; Áp dụng bộ tiêu chí Verification ở mục 17.2, chỉ ra
+yêu cầu này vi phạm tiêu chí nào, và viết lại thành một yêu cầu đạt chuẩn.</li>
+<li>Với yêu cầu (đã viết rõ ràng): &quot;Khách hàng có thể đặt tối đa 20 đơn hàng cùng lúc trong một
+ngày.&quot; — yêu cầu này <strong>verify đạt</strong> nhưng có khả năng <strong>validate không đạt</strong>. Giải thích vì sao,
+và đề xuất câu hỏi bạn sẽ hỏi lại stakeholder để làm rõ ý định thật.</li>
+</ol>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li><strong>Chỉ làm Verification, bỏ qua Validation</strong>: tài liệu viết rất chuyên nghiệp, rõ ràng, đầy đủ —
+nhưng giải quyết sai vấn đề, vì không ai xác nhận lại với đúng stakeholder có thẩm quyền.</li>
+<li><strong>Tự mình &quot;validate&quot; mà không có stakeholder tham gia</strong>: BA tự cho là đúng theo hiểu biết cá nhân
+— đây thực chất vẫn chỉ là verification (kiểm tra logic nội tại), không phải validation thật sự.</li>
+<li><strong>Review yêu cầu quá muộn, sau khi Design/Implementation đã bắt đầu</strong>: mất đi lợi ích lớn nhất
+của validation — phát hiện sai sót càng sớm, chi phí sửa càng thấp (nhắc lại nguyên lý Chương 2).</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<p>Verification kiểm tra &quot;viết có đúng cách không&quot; (rõ ràng, đầy đủ, nhất quán, khả thi, đo lường
+được, truy vết được), Validation kiểm tra &quot;có đúng vấn đề nghiệp vụ không&quot; — cần phân biệt rõ và
+làm cả hai, không thể thay thế cho nhau. Chương 18 sẽ học cách quản lý khi yêu cầu <strong>thay đổi</strong>
+giữa dự án — điều gần như chắc chắn sẽ xảy ra, dù dự án làm theo mô hình nào.</p>
+
+</article>
+<div class="prev-next"><a class="prev" href="./ch16-requirements-traceability-matrix.html">&larr; 16. Requirements Traceability Matrix (RTM)</a><a class="next" href="./ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

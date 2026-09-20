@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>27. Sprint Planning &amp; vai trò của BA trong sprint — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="../part1-quy-trinh-phat-trien/ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="./ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class="active"><a href="./ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="./ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="./ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="./ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="./ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="../part7-phu-luc/appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="../part7-phu-luc/appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 27: Sprint Planning &amp; vai trò của BA trong sprint</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Hiểu vai trò của hoạt động &quot;Backlog Refinement&quot; (còn gọi là Backlog Grooming) — diễn ra trước
+Sprint Planning, không phải trong sự kiện Sprint Planning chính thức.</li>
+<li>Biết BA cần chuẩn bị gì trước Sprint Planning để buổi họp diễn ra hiệu quả.</li>
+<li>Phân biệt công việc BA làm trong sprint đang chạy so với công việc chuẩn bị cho sprint tiếp theo.</li>
+</ul>
+<h2>27.1 Backlog Refinement — nơi phần lớn công việc BA diễn ra</h2>
+<p>Chương 8 đã giới thiệu 5 sự kiện chính thức của Scrum — nhưng <strong>Backlog Refinement không phải một
+sự kiện chính thức</strong> trong Scrum Guide, mà là một <strong>hoạt động liên tục</strong>, thường diễn ra định kỳ
+(ví dụ: 1-2 buổi/tuần, mỗi buổi 1 tiếng) để chuẩn bị backlog cho các sprint sắp tới.</p>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    subgraph Refinement[&quot;Backlog Refinement (liên tục, trước sprint)&quot;]
+        R1[&quot;Làm rõ User Story&lt;br/&gt;còn mơ hồ&quot;] --&gt; R2[&quot;Viết/hoàn thiện&lt;br/&gt;Acceptance Criteria&quot;]
+        R2 --&gt; R3[&quot;Chia nhỏ story&lt;br/&gt;quá lớn&quot;]
+        R3 --&gt; R4[&quot;Ước lượng sơ bộ&lt;br/&gt;(story point)&quot;]
+    end
+    Refinement --&gt; SP[&quot;Sprint Planning&lt;br/&gt;(chỉ còn việc chọn &amp; cam kết)&quot;]
+</pre></div>
+<p>Đây là nơi phần lớn thời gian và công sức của BA thực sự dành cho — <strong>không phải trong buổi Sprint
+Planning</strong>. Nếu backlog được refine tốt trước đó, Sprint Planning chỉ còn là việc PO trình bày độ
+ưu tiên, đội xác nhận hiểu đúng, và cam kết khối lượng công việc cho sprint — không cần dừng lại
+để phân tích yêu cầu từ đầu.</p>
+<h2>27.2 Checklist chuẩn bị của BA trước Sprint Planning</h2>
+<p>Với mỗi User Story dự kiến đưa vào sprint tiếp theo, BA cần đảm bảo đạt <strong>Definition of Ready</strong>
+(đã giới thiệu ở Chương 24):</p>
+<ul>
+<li>[ ] User Story viết đúng cấu trúc, có đủ &quot;vai trò - nhu cầu - lợi ích&quot; (Chương 23).</li>
+<li>[ ] Đạt tiêu chí INVEST, đặc biệt là <strong>Small</strong> (đủ nhỏ để hoàn thành trong 1 sprint) và
+<strong>Estimable</strong> (đội đủ hiểu để ước lượng).</li>
+<li>[ ] Có Acceptance Criteria viết theo Gherkin, bao phủ cả trường hợp thành công và thất bại.</li>
+<li>[ ] Không còn phụ thuộc (dependency) chưa giải quyết vào story/hệ thống khác.</li>
+<li>[ ] Đã trao đổi trước với Dev/QA nếu có điểm phức tạp về mặt kỹ thuật cần làm rõ sớm.</li>
+</ul>
+<p>Nếu một story chưa đạt các tiêu chí trên, <strong>không nên đưa vào Sprint Planning</strong> — sẽ chỉ gây lãng
+phí thời gian buổi họp để phân tích thay vì lên kế hoạch.</p>
+<h2>27.3 Vai trò của BA trong chính buổi Sprint Planning</h2>
+<p>Dù phần lớn công việc đã làm ở Refinement, BA vẫn có vai trò cụ thể trong buổi Sprint Planning:</p>
+<ul>
+<li><strong>Trả lời câu hỏi làm rõ phát sinh tại chỗ</strong>: dù đã refine kỹ, Dev có thể vẫn có câu hỏi mới khi
+thảo luận chi tiết cách hiện thực.</li>
+<li><strong>Xác nhận độ ưu tiên cùng PO</strong>: đảm bảo thứ tự chọn story vào sprint phản ánh đúng giá trị
+nghiệp vụ (liên hệ MoSCoW/WSJF — Chương 26), không chỉ chọn theo độ dễ làm.</li>
+<li><strong>Ghi nhận rủi ro/giả định mới phát sinh</strong>: nếu trong lúc thảo luận, đội phát hiện một giả định
+quan trọng (ví dụ: &quot;giả sử cổng thanh toán hỗ trợ hoàn tiền tự động&quot;) — BA cần ghi lại để xác
+minh sau, tránh giả định sai lặng lẽ trôi vào sprint mà không ai kiểm chứng (liên hệ RAID Log —
+Chương 31).</li>
+</ul>
+<h2>27.4 Công việc của BA trong sprint đang chạy — nhìn hai hướng cùng lúc</h2>
+<p>BA giỏi trong Scrum thường <strong>làm việc song song hai luồng</strong>:</p>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    subgraph Hientai[&quot;Sprint hiện tại (N)&quot;]
+        H1[&quot;Trả lời câu hỏi Dev&lt;br/&gt;khi code&quot;] --&gt; H2[&quot;Chuẩn bị nội dung&lt;br/&gt;Sprint Review/demo&quot;]
+    end
+    subgraph TiepTheo[&quot;Chuẩn bị Sprint N+1&quot;]
+        T1[&quot;Backlog Refinement&quot;] --&gt; T2[&quot;Elicitation thêm&lt;br/&gt;nếu cần (Chương 12)&quot;]
+    end
+    Hientai -.-&gt;|&quot;Song song&quot;| TiepTheo
+</pre></div>
+<p>Đây là điểm khác biệt lớn so với Waterfall (Chương 6), nơi BA thường làm xong hẳn giai đoạn
+Requirements rồi mới chuyển hẳn sang hỗ trợ Design/Implementation. Trong Scrum, BA luôn &quot;sống&quot;
+đồng thời ở hai thời điểm: <strong>hỗ trợ sprint hiện tại</strong>, và <strong>chuẩn bị cho sprint tiếp theo</strong> — nếu
+chỉ tập trung một trong hai, đội sẽ hoặc thiếu hỗ trợ tức thời, hoặc thiếu backlog sẵn sàng khi
+sprint tiếp theo bắt đầu.</p>
+<h2>27.5 Ví dụ thực tế với FoodNow</h2>
+<p>Trong tuần đang chạy Sprint 3 (đội đang code Epic B — Theo dõi đơn hàng), lịch làm việc điển hình
+của BA có thể như sau:</p>
+<ul>
+<li><strong>Thứ 2-3</strong>: Trả lời câu hỏi Dev về US-202 (thông báo đẩy) đang code trong sprint hiện tại; đồng
+thời tổ chức buổi Refinement 1 tiếng cho các story của Epic C (Chương trình khách hàng thân
+thiết) dự kiến vào Sprint 4.</li>
+<li><strong>Thứ 4</strong>: Phỏng vấn nhanh (elicitation) với Phòng Marketing để làm rõ chi tiết US-405 (thông báo
+điểm sắp hết hạn) còn thiếu Acceptance Criteria.</li>
+<li><strong>Thứ 5</strong>: Chuẩn bị kịch bản demo cho Sprint Review cuối tuần, xác nhận với QA rằng US-201, US-202
+đã pass test.</li>
+<li><strong>Thứ 6</strong>: Tham gia Sprint Review, ghi nhận phản hồi từ stakeholder; tham gia Retrospective.</li>
+</ul>
+<h2>Bài tập</h2>
+<ol>
+<li>Với 3 User Story chưa đạt Definition of Ready (tự chọn từ <code>templates/user-story-epic/FoodNow- UserStories.md</code>, giả định chúng còn thiếu Acceptance Criteria), viết ra kế hoạch cụ thể bạn sẽ
+làm trong buổi Backlog Refinement để đưa chúng đạt DoR.</li>
+<li>Giải thích bằng lời của bạn: vì sao việc BA &quot;làm việc song song hai luồng&quot; (sprint hiện tại +
+chuẩn bị sprint tiếp theo) lại là một thách thức lớn hơn so với làm việc trong mô hình Waterfall.</li>
+</ol>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li><strong>Không tổ chức Backlog Refinement riêng, dồn hết việc phân tích vào Sprint Planning</strong>: làm buổi
+Sprint Planning kéo dài quá lâu, đội mệt mỏi, giảm chất lượng ước lượng.</li>
+<li><strong>Chỉ tập trung sprint hiện tại, quên chuẩn bị cho sprint tiếp theo</strong>: dẫn đến backlog &quot;cạn kiệt&quot;
+vào đầu sprint sau, đội phải chờ BA phân tích gấp, ảnh hưởng chất lượng.</li>
+<li><strong>Đưa story chưa đạt Definition of Ready vào Sprint Planning &quot;cho đủ số lượng&quot;</strong>: gây lãng phí
+thời gian buổi họp và rủi ro cam kết sai khối lượng công việc thực tế đội có thể làm.</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<p>Phần lớn công việc BA trong Scrum diễn ra ở hoạt động Backlog Refinement (không phải sự kiện chính
+thức nhưng cực kỳ quan trọng) trước Sprint Planning, và BA cần làm việc song song hai luồng: hỗ trợ
+sprint hiện tại và chuẩn bị cho sprint tiếp theo. Chương 28 sẽ đi vào khái niệm cốt lõi của việc
+giao hàng theo Agile: <strong>Incremental &amp; Iterative Delivery</strong>.</p>
+
+</article>
+<div class="prev-next"><a class="prev" href="./ch26-uu-tien-hoa-backlog.html">&larr; 26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a><a class="next" href="./ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

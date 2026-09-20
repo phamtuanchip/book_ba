@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8. Scrum chi tiết: vai trò, sự kiện, artifact — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="./ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="./ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class="active"><a href="./ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="./ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="./ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="./ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="../part7-phu-luc/appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="../part7-phu-luc/appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 8: Scrum chi tiết: vai trò, sự kiện, artifact</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Gọi tên và giải thích được 3 vai trò, 5 sự kiện, 3 artifact của Scrum.</li>
+<li>Mô tả được một sprint điển hình diễn ra như thế nào từ đầu đến cuối.</li>
+<li>Xác định rõ BA tham gia vào sự kiện nào, đóng góp gì — kể cả khi BA không phải một vai trò
+&quot;chính thức&quot; được định nghĩa trong Scrum Guide.</li>
+</ul>
+<h2>8.1 Scrum là gì?</h2>
+<p><strong>Scrum</strong> là framework Agile phổ biến nhất, tổ chức công việc thành các chu kỳ lặp cố định gọi là
+<strong>Sprint</strong> (thường 1-4 tuần, phổ biến nhất là 2 tuần). Mỗi sprint là một vòng lặp đầy đủ các giai
+đoạn SDLC thu nhỏ (Requirements → Design → Implementation → Testing) cho một phần nhỏ sản phẩm.</p>
+<blockquote>
+<p>Lưu ý quan trọng: <strong>Scrum không định nghĩa vai trò &quot;Business Analyst&quot;</strong> trong bộ tài liệu chính
+thức (Scrum Guide) — chỉ có Product Owner, Scrum Master, Developers. Trong thực tế, công việc
+BA vẫn tồn tại và cần thiết, thường được một người đảm nhận dưới danh nghĩa: chính PO kiêm luôn,
+một BA riêng hỗ trợ PO, hoặc một Developer kiêm phân tích. Sách này gọi chung người làm công
+việc đó là &quot;BA&quot; dù chức danh chính thức trong đội có thể khác.</p>
+</blockquote>
+<h2>8.2 Ba vai trò</h2>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    PO[&quot;Product Owner&lt;br/&gt;Quyết định CÁI GÌ cần làm,&lt;br/&gt;và thứ tự ưu tiên&quot;]
+    SM[&quot;Scrum Master&lt;br/&gt;Đảm bảo đội tuân thủ&lt;br/&gt;và cải tiến quy trình Scrum&quot;]
+    DevTeam[&quot;Developers&lt;br/&gt;Quyết định LÀM THẾ NÀO,&lt;br/&gt;tự tổ chức thực hiện&quot;]
+    PO &lt;--&gt; DevTeam
+    SM -.-&gt;|&quot;hỗ trợ, gỡ vướng&quot;| PO
+    SM -.-&gt;|&quot;hỗ trợ, gỡ vướng&quot;| DevTeam
+</pre></div>
+<ul>
+<li><strong>Product Owner (PO)</strong>: chịu trách nhiệm tối đa hoá giá trị sản phẩm, quản lý Product Backlog,
+quyết định thứ tự ưu tiên. BA thường làm việc <strong>rất sát</strong> với PO — cung cấp phân tích để PO ra
+quyết định đúng (Chương 27).</li>
+<li><strong>Scrum Master (SM)</strong>: không phải &quot;quản lý dự án&quot; theo nghĩa truyền thống — vai trò của SM là
+đảm bảo đội hiểu và áp dụng đúng Scrum, loại bỏ trở ngại (impediment) cho đội.</li>
+<li><strong>Developers</strong>: bao gồm mọi người trực tiếp tạo ra sản phẩm (coder, tester, designer trong một
+số đội) — tự tổ chức, tự quyết định cách hoàn thành công việc trong sprint.</li>
+</ul>
+<h2>8.3 Năm sự kiện (Events)</h2>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart TB
+    Backlog[&quot;Product Backlog&lt;br/&gt;(luôn tồn tại, liên tục refine)&quot;] --&gt; SP[&quot;Sprint Planning&lt;br/&gt;(đầu sprint)&quot;]
+    SP --&gt; Sprint[&quot;Sprint (1-4 tuần)&quot;]
+    Sprint --&gt; DS[&quot;Daily Scrum&lt;br/&gt;(mỗi ngày, ~15 phút)&quot;]
+    DS --&gt; Sprint
+    Sprint --&gt; SR[&quot;Sprint Review&lt;br/&gt;(cuối sprint, demo)&quot;]
+    SR --&gt; Retro[&quot;Sprint Retrospective&lt;br/&gt;(cuối sprint, cải tiến quy trình)&quot;]
+    Retro --&gt; SP
+</pre></div>
+<table>
+<thead>
+<tr>
+<th>Sự kiện</th>
+<th>Mục đích</th>
+<th>BA tham gia thế nào</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sprint</strong></td>
+<td>&quot;Chiếc hộp&quot; chứa mọi sự kiện khác, có độ dài cố định</td>
+<td>BA làm việc liên tục trong suốt sprint, không chỉ ở đầu/cuối</td>
+</tr>
+<tr>
+<td><strong>Sprint Planning</strong></td>
+<td>Đội chọn các hạng mục từ Product Backlog đưa vào Sprint Backlog, thống nhất mục tiêu sprint</td>
+<td>BA giải thích chi tiết yêu cầu, trả lời câu hỏi để đội ước lượng chính xác (Chương 27, 30)</td>
+</tr>
+<tr>
+<td><strong>Daily Scrum</strong></td>
+<td>Đội đồng bộ tiến độ hằng ngày trong 15 phút</td>
+<td>BA tham dự để nắm vấn đề phát sinh sớm, sẵn sàng làm rõ yêu cầu ngay khi Dev cần</td>
+</tr>
+<tr>
+<td><strong>Sprint Review</strong></td>
+<td>Demo sản phẩm đã hoàn thành cho stakeholder, thu thập phản hồi</td>
+<td>BA chuẩn bị nội dung demo cùng đội, ghi nhận phản hồi để đưa vào backlog tiếp theo</td>
+</tr>
+<tr>
+<td><strong>Sprint Retrospective</strong></td>
+<td>Đội tự nhìn lại cách làm việc, đề xuất cải tiến</td>
+<td>BA đóng góp góc nhìn về quy trình làm rõ yêu cầu có hiệu quả không</td>
+</tr>
+</tbody>
+</table>
+<h2>8.4 Ba Artifact (sản phẩm/tài liệu)</h2>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Là gì</th>
+<th>Liên quan đến BA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Product Backlog</strong></td>
+<td>Danh sách toàn bộ công việc cần làm cho sản phẩm, sắp theo ưu tiên, luôn thay đổi</td>
+<td>BA/PO liên tục &quot;refine&quot; (làm rõ, chia nhỏ) các hạng mục trong backlog (Chương 24, 27)</td>
+</tr>
+<tr>
+<td><strong>Sprint Backlog</strong></td>
+<td>Tập con của Product Backlog được chọn cho sprint hiện tại, cộng với kế hoạch để hoàn thành</td>
+<td>BA đảm bảo các hạng mục trong Sprint Backlog đã đủ rõ ràng để Dev bắt tay làm ngay</td>
+</tr>
+<tr>
+<td><strong>Increment</strong></td>
+<td>Tổng các phần đã hoàn thành, đạt &quot;Definition of Done&quot;, có thể release được</td>
+<td>BA xác nhận Increment có đúng đáp ứng ý định nghiệp vụ ban đầu không (liên hệ Chương 34 - UAT)</td>
+</tr>
+</tbody>
+</table>
+<h2>8.5 Một sprint điển hình với FoodNow</h2>
+<p>Giả sử đội FoodNow làm Scrum, sprint 2 tuần, đang phát triển tính năng &quot;theo dõi đơn hàng real-time&quot;:</p>
+<ol>
+<li><strong>Sprint Planning (ngày 1)</strong>: PO đưa User Story &quot;Là khách hàng, tôi muốn xem trạng thái đơn hàng
+theo thời gian thực để biết khi nào đồ ăn tới&quot; vào sprint. BA giải thích rõ 4 trạng thái đơn hàng
+cần hiển thị, Dev ước lượng story point.</li>
+<li><strong>Trong sprint</strong>: Dev code, gặp câu hỏi &quot;nếu nhà hàng huỷ đơn giữa chừng thì hiển thị trạng thái
+gì?&quot; — hỏi trực tiếp BA thay vì tự đoán, BA trả lời trong Daily Scrum hoặc trao đổi riêng.</li>
+<li><strong>Sprint Review (cuối sprint)</strong>: Demo tính năng cho đại diện quản lý chi nhánh (stakeholder),
+ghi nhận phản hồi: &quot;cần thêm âm thanh thông báo khi đơn được giao xong&quot; — đưa vào backlog cho
+sprint sau.</li>
+<li><strong>Sprint Retrospective</strong>: Đội nhận ra việc làm rõ yêu cầu về trạng thái đơn hàng lẽ ra nên làm
+kỹ hơn <strong>trước</strong> Sprint Planning (ở bước refinement) để tránh phát sinh câu hỏi giữa sprint.</li>
+</ol>
+<h2>Bài tập</h2>
+<ol>
+<li>Vẽ lại timeline một sprint 2 tuần cho FoodNow theo mẫu ở mục 8.5, nhưng với một tính năng khác:
+&quot;khách hàng đặt lại đơn hàng cũ chỉ với 1 chạm&quot;. Ghi rõ BA làm gì ở mỗi sự kiện.</li>
+<li>Giải thích vì sao Daily Scrum giới hạn 15 phút lại quan trọng — điều gì xảy ra nếu buổi họp này
+kéo dài thành 1 tiếng thảo luận sâu mỗi ngày?</li>
+</ol>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li><strong>BA vắng mặt trong Daily Scrum/Sprint Planning vì nghĩ &quot;không phải việc của mình&quot;</strong>: dẫn đến Dev
+phải tự đoán yêu cầu khi BA không có mặt để hỏi ngay.</li>
+<li><strong>Nhồi nhét quá nhiều làm rõ yêu cầu vào Sprint Planning</strong>: nên làm ở bước refinement/backlog
+grooming <strong>trước</strong> Sprint Planning (Chương 27), để Sprint Planning chỉ còn việc thống nhất phạm
+vi và ước lượng, không phải ngồi phân tích yêu cầu từ đầu.</li>
+<li><strong>Coi Sprint Review là buổi &quot;nghiệm thu chính thức&quot;</strong>: Sprint Review là để lấy phản hồi sớm, tinh
+chỉnh hướng đi — không thay thế cho UAT chính thức trước khi release rộng rãi (Chương 34).</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<p>Scrum tổ chức công việc qua Sprint với 3 vai trò (PO, SM, Developers), 5 sự kiện (Sprint, Planning,
+Daily Scrum, Review, Retrospective) và 3 artifact (Product Backlog, Sprint Backlog, Increment) — dù
+không có vai trò BA chính thức, công việc phân tích vẫn cần thiết xuyên suốt. Chương 9 sẽ giới
+thiệu Extreme Programming (XP) — framework Agile tập trung vào <strong>thực hành kỹ thuật</strong>, thường được
+kết hợp cùng Scrum.</p>
+
+</article>
+<div class="prev-next"><a class="prev" href="./ch07-agile-manifesto.html">&larr; 7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a><a class="next" href="./ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

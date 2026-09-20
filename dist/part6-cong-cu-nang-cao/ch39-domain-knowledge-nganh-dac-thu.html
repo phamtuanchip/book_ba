@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>39. Domain knowledge: BA trong Banking, E-commerce, Insurance — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="../part1-quy-trinh-phat-trien/ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="./ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="./ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class="active"><a href="./ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="./ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="../part7-phu-luc/appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="../part7-phu-luc/appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 39: Domain knowledge: BA trong Banking, E-commerce, Insurance</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Hiểu vì sao domain knowledge (hiểu biết chuyên sâu về một ngành) là lợi thế cạnh tranh lớn của BA.</li>
+<li>Nắm được đặc điểm nghiệp vụ đặc thù của 3 ngành phổ biến: Banking, E-commerce, Insurance.</li>
+<li>Biết cách bắt đầu xây dựng domain knowledge cho một ngành mới khi chuyển việc/chuyển dự án.</li>
+</ul>
+<h2>39.1 Vì sao domain knowledge quan trọng?</h2>
+<p>Các kỹ thuật đã học xuyên suốt cuốn sách (elicitation, viết User Story, RTM...) là <strong>kỹ năng tổng
+quát</strong>, áp dụng được cho mọi ngành. Nhưng một BA có thêm <strong>domain knowledge</strong> — hiểu sâu về đặc thù
+nghiệp vụ, quy định, thuật ngữ riêng của một ngành cụ thể — sẽ:</p>
+<ul>
+<li>Elicitation hiệu quả hơn nhiều: biết trước câu hỏi nào quan trọng, tránh bỏ sót yêu cầu đặc thù
+ngành mà người ngoài ngành không biết để hỏi.</li>
+<li>Được tin tưởng hơn từ stakeholder: nói đúng thuật ngữ, hiểu đúng ràng buộc, tạo cảm giác &quot;đây là
+người hiểu việc của chúng tôi&quot;, không chỉ là &quot;người biết viết tài liệu&quot;.</li>
+<li>Phát hiện rủi ro/quy định tuân thủ mà BA thiếu domain knowledge dễ bỏ sót — hậu quả có thể rất
+nghiêm trọng ở các ngành có quy định pháp lý chặt (Banking, Insurance).</li>
+</ul>
+<h2>39.2 Banking (Ngân hàng)</h2>
+<p><strong>Đặc điểm nghiệp vụ đặc thù</strong>:</p>
+<ul>
+<li>Quy định pháp lý rất chặt chẽ (Ngân hàng Nhà nước, chống rửa tiền — AML, xác thực khách hàng —
+KYC/eKYC).</li>
+<li>Yêu cầu bảo mật cực cao (giao dịch tài chính, dữ liệu nhạy cảm).</li>
+<li>Quy trình phê duyệt nhiều lớp (ví dụ: một khoản vay cần qua nhiều bước thẩm định, không chỉ 1
+người quyết định).</li>
+<li>Thường ưu tiên mô hình Waterfall hoặc Hybrid (Chương 6, 11) cho các hệ thống lõi (core banking)
+vì yêu cầu tài liệu hoá đầy đủ phục vụ kiểm toán, nhưng có thể dùng Agile cho các kênh số
+(mobile banking, ứng dụng khách hàng) ít ràng buộc pháp lý hơn.</li>
+</ul>
+<p><strong>Thuật ngữ đặc thù BA cần biết</strong>: KYC (Know Your Customer), AML (Anti-Money Laundering), core
+banking system, giao dịch treo (pending transaction), hạn mức tín dụng (credit limit).</p>
+<p><strong>Ví dụ tình huống</strong>: khi phân tích yêu cầu &quot;Cho phép khách hàng chuyển khoản qua app&quot;, BA có domain
+knowledge ngân hàng sẽ tự động hỏi thêm: hạn mức chuyển khoản/ngày là bao nhiêu? Có cần xác thực
+2 lớp (OTP) cho giao dịch trên một ngưỡng nhất định không? Giao dịch có cần được ghi log phục vụ
+audit theo quy định không? — những câu hỏi này không phải ai cũng tự nghĩ ra nếu chưa quen ngành.</p>
+<h2>39.3 E-commerce (Thương mại điện tử)</h2>
+<p><strong>Đặc điểm nghiệp vụ đặc thù</strong>:</p>
+<ul>
+<li>Quản lý tồn kho (inventory) phức tạp, đặc biệt khi bán trên nhiều kênh cùng lúc (đa kênh —
+omnichannel).</li>
+<li>Logistics và vận chuyển: nhiều đối tác giao hàng, tính phí ship theo khu vực/trọng lượng.</li>
+<li>Khuyến mãi/giá phức tạp: mã giảm giá, flash sale, giá theo số lượng mua, chương trình thành viên.</li>
+<li>Thường ưu tiên Agile/Scrum (Chương 8) vì thị trường thay đổi nhanh, cần phản hồi liên tục.</li>
+</ul>
+<p><strong>Thuật ngữ đặc thù BA cần biết</strong>: SKU (Stock Keeping Unit — mã quản lý từng biến thể sản phẩm),
+cart abandonment (bỏ giỏ hàng giữa chừng), fulfillment (quy trình xử lý đơn từ lúc đặt đến lúc
+giao), omnichannel.</p>
+<p><strong>Liên hệ trực tiếp</strong>: dự án FoodNow xuyên suốt sách này chính là một ví dụ e-commerce dạng đặt đồ
+ăn (food delivery) — các khái niệm như quản lý tồn kho món ăn theo chi nhánh (FR-CART-04, Chương
+20), tính phí/bán kính giao hàng (FR-DELIVERY-02) đều là ví dụ domain knowledge đặc thù ngành này.</p>
+<h2>39.4 Insurance (Bảo hiểm)</h2>
+<p><strong>Đặc điểm nghiệp vụ đặc thù</strong>:</p>
+<ul>
+<li>Quy trình thẩm định rủi ro (underwriting) phức tạp trước khi phát hành hợp đồng bảo hiểm.</li>
+<li>Quy trình xử lý bồi thường (claims processing) — nhiều bước xác minh, có thể liên quan điều tra
+gian lận.</li>
+<li>Sản phẩm bảo hiểm thường có nhiều điều khoản, điều kiện loại trừ (exclusion) phức tạp cần mô tả
+chính xác trong hệ thống.</li>
+<li>Thường là mô hình Hybrid: core system (tính phí, quản lý hợp đồng) theo Waterfall vì cần chính
+xác pháp lý cao; các kênh bán hàng số/ứng dụng chăm sóc khách hàng theo Agile.</li>
+</ul>
+<p><strong>Thuật ngữ đặc thù BA cần biết</strong>: underwriting (thẩm định rủi ro), premium (phí bảo hiểm), claim
+(yêu cầu bồi thường), policy (hợp đồng bảo hiểm), exclusion (điều khoản loại trừ).</p>
+<h2>39.5 Bảng so sánh nhanh 3 ngành</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Banking</th>
+<th>E-commerce</th>
+<th>Insurance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mức độ ràng buộc pháp lý</td>
+<td>Rất cao</td>
+<td>Trung bình (bảo vệ dữ liệu, quyền lợi người tiêu dùng)</td>
+<td>Rất cao</td>
+</tr>
+<tr>
+<td>Mô hình phổ biến</td>
+<td>Waterfall/Hybrid cho core, Agile cho kênh số</td>
+<td>Agile/Scrum</td>
+<td>Hybrid</td>
+</tr>
+<tr>
+<td>Độ phức tạp nghiệp vụ đặc trưng</td>
+<td>Quy trình phê duyệt nhiều lớp</td>
+<td>Quản lý tồn kho, logistics, khuyến mãi</td>
+<td>Thẩm định rủi ro, xử lý bồi thường</td>
+</tr>
+<tr>
+<td>Rủi ro nếu BA thiếu domain knowledge</td>
+<td>Vi phạm quy định pháp lý, lỗ hổng bảo mật</td>
+<td>Sai lệch tồn kho, tính phí ship sai</td>
+<td>Sai điều khoản hợp đồng, xử lý bồi thường sai</td>
+</tr>
+</tbody>
+</table>
+<h2>39.6 Cách xây dựng domain knowledge khi vào ngành mới</h2>
+<ol>
+<li><strong>Đọc tài liệu quy định/chuẩn ngành</strong> (nếu có) — ví dụ thông tư của Ngân hàng Nhà nước cho
+Banking, quy định bảo vệ người tiêu dùng cho E-commerce.</li>
+<li><strong>Học từ tài liệu nội bộ của dự án trước đó</strong> (BRD/SRS cũ, nếu có quyền truy cập) — cách nhanh
+nhất để thấy ngôn ngữ/quy trình thực tế công ty đang dùng.</li>
+<li><strong>Chủ động hỏi chuyên gia nghiệp vụ (Subject Matter Expert - SME)</strong>: đừng ngại hỏi &quot;cơ bản&quot; khi
+mới vào ngành — SME thường sẵn lòng giải thích nếu thấy bạn thực sự muốn hiểu sâu.</li>
+<li><strong>Tự trải nghiệm sản phẩm với tư cách người dùng</strong> (nếu có thể): tự mở tài khoản ngân hàng, tự
+mua hàng online, tự tìm hiểu mua một gói bảo hiểm — trải nghiệm trực tiếp giúp hiểu nhanh hơn
+đọc tài liệu.</li>
+<li><strong>Tích luỹ dần qua nhiều dự án cùng ngành</strong>: domain knowledge sâu thường cần thời gian, không có
+đường tắt hoàn toàn — đây cũng là lý do nhiều BA chọn &quot;chuyên sâu&quot; một ngành thay vì nhảy ngành
+liên tục (liên hệ lộ trình sự nghiệp — Chương 4).</li>
+</ol>
+<h2>Bài tập</h2>
+<ol>
+<li>Chọn một ngành khác (không phải Banking/E-commerce/Insurance) mà bạn quan tâm, liệt kê 3 thuật
+ngữ đặc thù và 1 đặc điểm nghiệp vụ riêng của ngành đó mà một BA mới vào cần biết.</li>
+<li>Áp dụng bước 3 ở mục 39.6 (hỏi SME): viết ra 3 câu hỏi bạn sẽ hỏi một chuyên gia vận hành nhà
+hàng thực tế nếu được phỏng vấn để hiểu sâu hơn về domain &quot;chuỗi nhà hàng/F&amp;B&quot; cho dự án FoodNow.</li>
+</ol>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li><strong>Nghĩ kỹ năng phân tích tổng quát là đủ, không cần đầu tư domain knowledge</strong>: dễ dẫn đến bỏ sót
+yêu cầu đặc thù ngành quan trọng, đặc biệt nguy hiểm ở ngành có ràng buộc pháp lý cao.</li>
+<li><strong>Ngại hỏi vì sợ bị đánh giá &quot;không biết gì&quot;</strong>: SME thường đánh giá cao người chủ động hỏi để
+hiểu đúng, hơn là người tự đoán sai rồi làm sai.</li>
+<li><strong>Áp dụng nguyên xi kinh nghiệm từ ngành cũ sang ngành mới mà không kiểm chứng</strong>: mỗi ngành có
+đặc thù riêng — kinh nghiệm cũ là nền tảng tốt nhưng cần xác minh lại, không áp dụng máy móc.</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<p>Domain knowledge tạo lợi thế cạnh tranh lớn cho BA — mỗi ngành (Banking, E-commerce, Insurance...)
+có đặc điểm nghiệp vụ, thuật ngữ, mô hình quản lý dự án phổ biến riêng, và xây dựng domain knowledge
+cần thời gian tích luỹ qua tài liệu, SME, và trải nghiệm thực tế. Chương 40 — chương cuối cùng của
+phần nội dung chính — sẽ tổng kết toàn bộ sách qua một case study xuyên suốt: nhìn lại toàn bộ vòng
+đời dự án FoodNow từ góc nhìn BA, từ ý tưởng ban đầu đến sau go-live.</p>
+
+</article>
+<div class="prev-next"><a class="prev" href="./ch38-data-sql-co-ban-cho-ba.html">&larr; 38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a><a class="next" href="./ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

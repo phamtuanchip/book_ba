@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="../part1-quy-trinh-phat-trien/ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="./ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="./ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="./ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class="active"><a href="./ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="./ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="./ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="../part7-phu-luc/appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="../part7-phu-luc/appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 29: Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Nắm được cấu trúc của một Release Plan/Incremental Delivery Plan.</li>
+<li>Biết cách trình bày kế hoạch giao hàng theo increment cho stakeholder không rành kỹ thuật.</li>
+<li>Có sẵn mẫu Incremental Delivery Plan đầy đủ trong <code>templates/incremental-delivery/</code>.</li>
+</ul>
+<h2>29.1 Từ chiến lược đến kế hoạch cụ thể</h2>
+<p>Chương 28 giới thiệu khái niệm và chiến lược Incremental Delivery — Chương này biến chiến lược đó
+thành một <strong>tài liệu cụ thể</strong>, giúp mọi stakeholder (kể cả người không rành kỹ thuật như Ban giám
+đốc) hiểu rõ: cái gì sẽ có, khi nào có, và làm sao đo được thành công của mỗi giai đoạn.</p>
+<h2>29.2 Cấu trúc một Incremental Delivery Plan</h2>
+<ol>
+<li><strong>Tổng quan</strong>: liên kết ngược về mục tiêu kinh doanh (BRD — Chương 19) và chiến lược chia
+increment đã chọn (Chương 28).</li>
+<li><strong>Bảng các Increment</strong>: với mỗi increment, nêu rõ:
+<ul>
+<li>Nội dung/phạm vi (Epic/Feature nào).</li>
+<li>Đối tượng nhận (toàn bộ người dùng hay nhóm thử nghiệm giới hạn).</li>
+<li>Thời gian dự kiến.</li>
+<li>Tiêu chí thành công/tiêu chí để chuyển sang increment tiếp theo.</li>
+<li>Rủi ro chính của increment đó.</li>
+</ul>
+</li>
+<li><strong>Sơ đồ timeline trực quan</strong>: giúp stakeholder hình dung nhanh (Gantt đơn giản hoặc timeline).</li>
+<li><strong>Kế hoạch truyền thông/đào tạo đi kèm mỗi increment</strong> (nếu cần) — liên hệ Transition
+Requirements (Chương 14).</li>
+<li><strong>Điều kiện điều chỉnh kế hoạch</strong>: nêu rõ ai có quyền quyết định thay đổi thứ tự/nội dung
+increment nếu có phát sinh (liên hệ Change Request — Chương 18).</li>
+</ol>
+<h2>29.3 Ví dụ timeline trực quan cho FoodNow</h2>
+<div class="mermaid-wrap"><pre class="mermaid">
+gantt
+    title Incremental Delivery Plan - FoodNow App
+    dateFormat YYYY-MM-DD
+    axisFormat %m/%Y
+    section Increment 1
+    Epic A - Đặt món &amp; Thanh toán       :a1, 2024-03-01, 60d
+    Thử nghiệm tại 2 chi nhánh          :milestone, 2024-04-30, 0d
+    section Increment 2
+    Epic B - Theo dõi đơn hàng          :a2, 2024-05-01, 30d
+    Epic D - Quản trị đơn hàng          :a3, 2024-05-01, 40d
+    Mở rộng toàn bộ 12 chi nhánh        :milestone, 2024-06-10, 0d
+    section Increment 3
+    Epic C - Khách hàng thân thiết      :a4, 2024-06-11, 45d
+    Ra mắt công khai đầy đủ             :milestone, 2024-07-26, 0d
+</pre></div>
+<h2>29.4 Mẫu tài liệu đầy đủ</h2>
+<p>Bản Incremental Delivery Plan đầy đủ (bao gồm bảng chi tiết từng increment, tiêu chí thành công,
+rủi ro, kế hoạch đào tạo) cho dự án FoodNow được lưu tại:</p>
+<blockquote>
+<p><strong><code>templates/incremental-delivery/FoodNow-IncrementalDeliveryPlan.md</code></strong></p>
+</blockquote>
+<p>Xem bản đầy đủ tại Phụ lục D (cuối sách).</p>
+<h2>29.5 Trình bày kế hoạch cho Sponsor không rành kỹ thuật</h2>
+<p>Khi trình bày Incremental Delivery Plan cho Ban giám đốc, tránh dùng thuật ngữ kỹ thuật (&quot;sprint&quot;,
+&quot;backlog&quot;, &quot;story point&quot;) — nên diễn đạt theo hướng <strong>giá trị kinh doanh của từng giai đoạn</strong>:</p>
+<blockquote>
+<p>Thay vì nói: &quot;Increment 1 hoàn thành Epic A trong 2 sprint 30 ngày.&quot;</p>
+<p>Nên nói: &quot;Trong 2 tháng đầu, khách hàng tại 2 chi nhánh thí điểm đã có thể đặt món và thanh toán
+qua app riêng — đây là bước đầu để chúng ta bắt đầu thu thập dữ liệu thực tế và giảm dần chi phí
+hoa hồng cho app bên thứ ba tại 2 chi nhánh này, trước khi mở rộng.&quot;</p>
+</blockquote>
+<p>Cách diễn đạt này áp dụng lại nguyên tắc &quot;song ngữ nghiệp vụ - kỹ thuật&quot; đã học ở Chương 3.</p>
+<h2>Bài tập</h2>
+<ol>
+<li>Mở <code>templates/incremental-delivery/FoodNow-IncrementalDeliveryPlan.md</code>, chọn 1 increment, thử
+viết lại phần &quot;Nội dung/phạm vi&quot; của increment đó theo ngôn ngữ dành cho Ban giám đốc (không
+dùng thuật ngữ kỹ thuật), theo mẫu ở mục 29.5.</li>
+<li>Vẽ một sơ đồ Gantt đơn giản (theo cú pháp Mermaid ở mục 29.3, hoặc vẽ tay) cho một kế hoạch chia
+increment khác mà bạn đề xuất ở bài tập Chương 28.</li>
+</ol>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li><strong>Coi Incremental Delivery Plan là cố định, không cập nhật khi có thay đổi</strong>: kế hoạch này cần
+được xem là &quot;sống&quot;, cập nhật khi có Change Request được phê duyệt (Chương 18) — không phải tài
+liệu chốt một lần như SRS trong Waterfall.</li>
+<li><strong>Không nêu rõ tiêu chí để chuyển sang increment tiếp theo</strong>: dẫn đến tình trạng &quot;cứ đến ngày là
+chuyển giai đoạn&quot; bất kể increment trước có đạt tiêu chí thành công hay không.</li>
+<li><strong>Trình bày kế hoạch bằng thuật ngữ kỹ thuật cho Sponsor không rành kỹ thuật</strong>: gây khó hiểu,
+giảm sự tin tưởng và tham gia của Sponsor vào quá trình theo dõi tiến độ.</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<p>Incremental Delivery Plan biến chiến lược giao hàng từng phần thành tài liệu cụ thể với timeline,
+tiêu chí thành công, và rủi ro cho từng increment — cần trình bày bằng ngôn ngữ giá trị kinh doanh
+khi làm việc với Sponsor. Chương 30 sẽ học kỹ năng liên quan chặt chẽ: <strong>ước lượng cơ bản</strong> — làm
+sao BA phối hợp cùng Dev/QA ước lượng độ lớn công việc một cách hợp lý.</p>
+
+</article>
+<div class="prev-next"><a class="prev" href="./ch28-incremental-iterative-delivery.html">&larr; 28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a><a class="next" href="./ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

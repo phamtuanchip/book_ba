@@ -1,0 +1,100 @@
+{
+  "title": "IT Business Analyst — Từ Zero Đến Thành Thạo",
+  "subtitle": "Dành cho người chưa biết gì về BA — kèm bộ tài liệu mẫu điền sẵn",
+  "parts": [
+    {
+      "id": "part0-nhap-mon",
+      "title": "Phần 0 — Nhập môn & định hướng nghề BA",
+      "chapters": [
+        { "num": 1, "slug": "ch01-ba-la-ai", "title": "BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật" },
+        { "num": 2, "slug": "ch02-tong-quan-sdlc", "title": "Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình" },
+        { "num": 3, "slug": "ch03-he-sinh-thai-du-an-phan-mem", "title": "Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào" },
+        { "num": 4, "slug": "ch04-dinh-huong-nghe-nghiep-ba", "title": "Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA" },
+        { "num": 5, "slug": "ch05-bo-ky-nang-cong-cu-ba", "title": "Bộ kỹ năng & công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến" }
+      ]
+    },
+    {
+      "id": "part1-quy-trinh-phat-trien",
+      "title": "Phần 1 — Quy trình phát triển & quản lý phần mềm",
+      "chapters": [
+        { "num": 6, "slug": "ch06-waterfall", "title": "Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm" },
+        { "num": 7, "slug": "ch07-agile-manifesto", "title": "Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu" },
+        { "num": 8, "slug": "ch08-scrum-chi-tiet", "title": "Scrum chi tiết: vai trò, sự kiện, artifact" },
+        { "num": 9, "slug": "ch09-extreme-programming-xp", "title": "Extreme Programming (XP): thực hành kỹ thuật và vai trò BA" },
+        { "num": 10, "slug": "ch10-kanban-so-sanh-mo-hinh", "title": "Kanban & so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP" },
+        { "num": 11, "slug": "ch11-vai-tro-ba-theo-mo-hinh", "title": "Vai trò và trách nhiệm cụ thể của BA trong từng mô hình" }
+      ]
+    },
+    {
+      "id": "part2-thu-thap-phan-tich-yeu-cau",
+      "title": "Phần 2 — Thu thập & phân tích yêu cầu",
+      "chapters": [
+        { "num": 12, "slug": "ch12-ky-thuat-elicitation", "title": "Kỹ thuật Elicitation: interview, workshop, survey, observation" },
+        { "num": 13, "slug": "ch13-stakeholder-analysis-raci", "title": "Stakeholder Analysis & ma trận RACI" },
+        { "num": 14, "slug": "ch14-phan-loai-yeu-cau", "title": "Phân loại yêu cầu: Business, Stakeholder, Solution, Transition" },
+        { "num": 15, "slug": "ch15-requirements-modeling", "title": "Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản" },
+        { "num": 16, "slug": "ch16-requirements-traceability-matrix", "title": "Requirements Traceability Matrix (RTM)" },
+        { "num": 17, "slug": "ch17-requirements-validation-verification", "title": "Requirements Validation & Verification" },
+        { "num": 18, "slug": "ch18-quan-ly-thay-doi-yeu-cau", "title": "Quản lý thay đổi yêu cầu: scope creep, Change Request" }
+      ]
+    },
+    {
+      "id": "part3-tai-lieu-ba-cot-loi",
+      "title": "Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)",
+      "chapters": [
+        { "num": 19, "slug": "ch19-brd-prd", "title": "BRD & PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ" },
+        { "num": 20, "slug": "ch20-srs-ieee830", "title": "SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ" },
+        { "num": 21, "slug": "ch21-frd-non-functional", "title": "FRD & yêu cầu phi chức năng (performance, security, usability)" },
+        { "num": 22, "slug": "ch22-use-case-specification", "title": "Use Case Specification: actor, flow chính/phụ, exception, mẫu" },
+        { "num": 23, "slug": "ch23-user-story-acceptance-criteria", "title": "User Story & Acceptance Criteria: INVEST, Gherkin, mẫu" },
+        { "num": 24, "slug": "ch24-epic-feature-backlog", "title": "Epic, Feature, User Story: phân rã backlog, mẫu backlog" },
+        { "num": 25, "slug": "ch25-wireframe-prototype-cho-ba", "title": "Wireframe & Prototype cơ bản cho BA" }
+      ]
+    },
+    {
+      "id": "part4-quan-ly-du-an-giao-hang",
+      "title": "Phần 4 — Quản lý dự án & giao hàng",
+      "chapters": [
+        { "num": 26, "slug": "ch26-uu-tien-hoa-backlog", "title": "Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano" },
+        { "num": 27, "slug": "ch27-sprint-planning-vai-tro-ba", "title": "Sprint Planning & vai trò của BA trong sprint" },
+        { "num": 28, "slug": "ch28-incremental-iterative-delivery", "title": "Incremental & Iterative Delivery: khái niệm, phân biệt" },
+        { "num": 29, "slug": "ch29-release-plan-delivery-document", "title": "Release Plan & Delivery Document: mẫu Incremental Delivery Plan" },
+        { "num": 30, "slug": "ch30-estimation-co-ban-cho-ba", "title": "Estimation cơ bản cho BA: story points, T-shirt sizing" },
+        { "num": 31, "slug": "ch31-raid-log-quan-ly-rui-ro", "title": "RAID Log: quản lý Risk, Assumption, Issue, Dependency" }
+      ]
+    },
+    {
+      "id": "part5-giao-tiep-kiem-thu-nghiem-thu",
+      "title": "Phần 5 — Giao tiếp, kiểm thử & nghiệm thu",
+      "chapters": [
+        { "num": 32, "slug": "ch32-giao-tiep-hieu-qua", "title": "Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder" },
+        { "num": 33, "slug": "ch33-facilitation-workshop", "title": "Facilitation: điều phối workshop, requirement review meeting" },
+        { "num": 34, "slug": "ch34-ba-va-qa-uat", "title": "BA & QA: viết test case cơ bản, UAT — mẫu UAT checklist" },
+        { "num": 35, "slug": "ch35-sign-off-nghiem-thu", "title": "Sign-off & nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document" },
+        { "num": 36, "slug": "ch36-do-luong-thanh-cong-kpi-okr", "title": "Đo lường thành công sau go-live: KPI, OKR, thu thập feedback" }
+      ]
+    },
+    {
+      "id": "part6-cong-cu-nang-cao",
+      "title": "Phần 6 — Công cụ & kỹ năng nâng cao",
+      "chapters": [
+        { "num": 37, "slug": "ch37-jira-confluence-cho-ba", "title": "Jira & Confluence cho BA: quản lý backlog, viết & liên kết tài liệu" },
+        { "num": 38, "slug": "ch38-data-sql-co-ban-cho-ba", "title": "Data & SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query" },
+        { "num": 39, "slug": "ch39-domain-knowledge-nganh-dac-thu", "title": "Domain knowledge: BA trong Banking, E-commerce, Insurance" },
+        { "num": 40, "slug": "ch40-case-study-tong-hop", "title": "Case study tổng hợp \"FoodNow\": nhìn lại toàn bộ vòng đời dự án" }
+      ]
+    },
+    {
+      "id": "part7-phu-luc",
+      "title": "Phụ lục",
+      "chapters": [
+        { "num": 41, "label": "Phụ lục A", "slug": "appendix-a-mau-brd-prd-day-du", "title": "Mẫu BRD & PRD đầy đủ (dự án FoodNow)" },
+        { "num": 42, "label": "Phụ lục B", "slug": "appendix-b-mau-srs-day-du", "title": "Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)" },
+        { "num": 43, "label": "Phụ lục C", "slug": "appendix-c-mau-epic-user-story-backlog", "title": "Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)" },
+        { "num": 44, "label": "Phụ lục D", "slug": "appendix-d-mau-incremental-delivery-plan", "title": "Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)" },
+        { "num": 45, "label": "Phụ lục E", "slug": "appendix-e-glossary-thuat-ngu-ba", "title": "Bảng thuật ngữ BA (Glossary) tra cứu nhanh" },
+        { "num": 46, "label": "Phụ lục F", "slug": "appendix-f-tai-lieu-tham-khao", "title": "Tài liệu tham khảo & nguồn học thêm" }
+      ]
+    }
+  ]
+}

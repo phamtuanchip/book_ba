@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="../part1-quy-trinh-phat-trien/ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="./ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="./ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="./ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class="active"><a href="./ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="./ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="./ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="./ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="../part7-phu-luc/appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="../part7-phu-luc/appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 15: Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Vẽ được Use Case Diagram để mô tả tổng quan chức năng hệ thống và actor tương tác.</li>
+<li>Vẽ được Activity Diagram để mô tả luồng nghiệp vụ có rẽ nhánh, song song.</li>
+<li>Đọc hiểu được Sequence Diagram mô tả tương tác giữa các thành phần theo thời gian.</li>
+<li>Vẽ được sơ đồ BPMN cơ bản để mô tả quy trình nghiệp vụ liên phòng ban.</li>
+<li>Biết chọn đúng loại sơ đồ cho đúng mục đích — lỗi phổ biến nhất của người mới là dùng sai loại
+sơ đồ cho tình huống không phù hợp.</li>
+</ul>
+<h2>15.1 Vì sao cần mô hình hoá bằng sơ đồ?</h2>
+<p>Văn bản thuần (như tài liệu Chương 14) tốt để mô tả <strong>chi tiết</strong>, nhưng kém hiệu quả để thể hiện
+<strong>cấu trúc tổng thể, luồng đi, hoặc tương tác giữa nhiều bên</strong>. Não người xử lý thông tin trực quan
+nhanh hơn nhiều so với đọc văn bản dài — một sơ đồ tốt giúp stakeholder (kể cả người không rành kỹ
+thuật) nhìn thấy ngay lỗ hổng logic mà đọc văn bản khó phát hiện ra.</p>
+<h2>15.2 Use Case Diagram — tổng quan chức năng và actor</h2>
+<p>Dùng để trả lời: <strong>&quot;hệ thống có những chức năng gì, ai (actor) tương tác với chức năng nào&quot;</strong> —
+phù hợp cho tài liệu ở mức tổng quan (BRD, phần đầu SRS), trước khi đi vào chi tiết từng use case
+(Chương 22).</p>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    KhachHang((Khách hàng))
+    NhanVien((Nhân viên chi nhánh))
+    NguoiGiao((Người giao hàng))
+
+    subgraph HeThong[&quot;Hệ thống FoodNow App&quot;]
+        UC1[&quot;Đặt món&quot;]
+        UC2[&quot;Thanh toán&quot;]
+        UC3[&quot;Theo dõi đơn hàng&quot;]
+        UC4[&quot;Xác nhận đơn hàng&quot;]
+        UC5[&quot;Cập nhật trạng thái giao hàng&quot;]
+    end
+
+    KhachHang --&gt; UC1
+    KhachHang --&gt; UC2
+    KhachHang --&gt; UC3
+    NhanVien --&gt; UC4
+    NguoiGiao --&gt; UC5
+</pre></div>
+<blockquote>
+<p>Lưu ý: sơ đồ trên dùng ký hiệu đơn giản hoá (flowchart) thay vì ký hiệu UML Use Case chuẩn (hình
+que biểu diễn actor, hình elip biểu diễn use case) vì công cụ Mermaid dùng trong sách chưa hỗ trợ
+đầy đủ ký hiệu UML Use Case. Khi làm việc thực tế, bạn có thể dùng draw.io/Lucidchart/Visio để vẽ
+đúng ký hiệu UML chuẩn nếu công ty yêu cầu — nhưng <strong>giá trị nằm ở nội dung (actor nào, chức năng
+nào), không nằm ở việc tuân thủ ký hiệu 100% đúng chuẩn UML</strong>.</p>
+</blockquote>
+<p><strong>Actor</strong> là bất kỳ ai/hệ thống nào tương tác với hệ thống từ bên ngoài — có thể là người
+(Khách hàng, Nhân viên) hoặc hệ thống khác (ví dụ: cổng thanh toán VNPay, hệ thống SMS gửi mã OTP).</p>
+<h2>15.3 Activity Diagram — luồng nghiệp vụ có rẽ nhánh</h2>
+<p>Dùng để mô tả <strong>các bước tuần tự, có điều kiện rẽ nhánh, có thể có nhánh song song</strong> — phù hợp mô
+tả một quy trình nghiệp vụ cụ thể, chi tiết hơn Use Case Diagram.</p>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart TD
+    Start([Bắt đầu]) --&gt; ChonMon[&quot;Khách chọn món,&lt;br/&gt;thêm vào giỏ hàng&quot;]
+    ChonMon --&gt; XacNhanGio{&quot;Xác nhận giỏ hàng?&quot;}
+    XacNhanGio --&gt;|Sửa lại| ChonMon
+    XacNhanGio --&gt;|Đồng ý| NhapDiaChi[&quot;Nhập địa chỉ giao hàng&quot;]
+    NhapDiaChi --&gt; ChonThanhToan{&quot;Chọn phương thức&lt;br/&gt;thanh toán&quot;}
+    ChonThanhToan --&gt;|Online| ThanhToanOnline[&quot;Xử lý qua cổng&lt;br/&gt;thanh toán&quot;]
+    ChonThanhToan --&gt;|Tiền mặt| GhiNhanCOD[&quot;Ghi nhận&lt;br/&gt;thanh toán khi giao&quot;]
+    ThanhToanOnline --&gt; KetQua{&quot;Thanh toán&lt;br/&gt;thành công?&quot;}
+    KetQua --&gt;|Không| ThongBaoLoi[&quot;Thông báo lỗi,&lt;br/&gt;quay lại chọn thanh toán&quot;]
+    ThongBaoLoi --&gt; ChonThanhToan
+    KetQua --&gt;|Có| TaoDon[&quot;Tạo đơn hàng,&lt;br/&gt;gửi cho chi nhánh&quot;]
+    GhiNhanCOD --&gt; TaoDon
+    TaoDon --&gt; End([Kết thúc])
+</pre></div>
+<p>Activity Diagram đặc biệt hữu ích để <strong>phát hiện các trường hợp ngoại lệ (exception) chưa được
+tính đến</strong> — ví dụ, khi vẽ sơ đồ trên, BA buộc phải trả lời câu hỏi &quot;nếu thanh toán online thất
+bại thì sao?&quot; — một câu hỏi dễ bị bỏ sót nếu chỉ mô tả bằng văn bản liệt kê các bước &quot;thành công&quot;.</p>
+<h2>15.4 Sequence Diagram — tương tác giữa các thành phần theo thời gian</h2>
+<p>Dùng để mô tả <strong>thứ tự trao đổi thông điệp (message) giữa các đối tượng/hệ thống theo trục thời
+gian</strong> — hữu ích khi cần làm rõ tương tác giữa nhiều hệ thống (ví dụ: app FoodNow, cổng thanh toán,
+hệ thống quản lý chi nhánh).</p>
+<div class="mermaid-wrap"><pre class="mermaid">
+sequenceDiagram
+    participant App as App FoodNow
+    participant CongTT as Cổng thanh toán
+    participant HeThong as Hệ thống FoodNow (backend)
+    participant ChiNhanh as Hệ thống chi nhánh
+
+    App-&gt;&gt;CongTT: Gửi yêu cầu thanh toán
+    CongTT--&gt;&gt;App: Xác nhận thành công
+    App-&gt;&gt;HeThong: Tạo đơn hàng
+    HeThong-&gt;&gt;ChiNhanh: Gửi thông báo đơn hàng mới
+    ChiNhanh--&gt;&gt;HeThong: Xác nhận đã nhận đơn
+    HeThong--&gt;&gt;App: Cập nhật trạng thái &quot;Đã xác nhận&quot;
+</pre></div>
+<p>Sequence Diagram thường được BA dùng khi làm việc gần với đội kỹ thuật hơn (ví dụ khi viết SRS chi
+tiết — Chương 20), vì nó thể hiện rõ <strong>ai gọi ai, theo thứ tự nào</strong> — thông tin quan trọng để Dev
+thiết kế API/tích hợp hệ thống.</p>
+<h2>15.5 BPMN cơ bản — quy trình nghiệp vụ liên phòng ban</h2>
+<p><strong>BPMN (Business Process Model and Notation)</strong> là chuẩn ký hiệu chuyên dùng để mô tả quy trình
+nghiệp vụ, đặc biệt khi quy trình đi <strong>qua nhiều phòng ban/vai trò khác nhau</strong> — dùng &quot;làn bơi&quot;
+(swimlane) để phân tách trách nhiệm của từng bên.</p>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart TD
+    subgraph KhachHang[&quot;Làn: Khách hàng&quot;]
+        A1[&quot;Đặt đơn hàng&quot;]
+    end
+    subgraph HeThong[&quot;Làn: Hệ thống&quot;]
+        A2[&quot;Kiểm tra tồn kho món ăn&quot;]
+        A3{&quot;Còn món?&quot;}
+        A5[&quot;Gửi đơn cho chi nhánh&quot;]
+    end
+    subgraph ChiNhanh[&quot;Làn: Chi nhánh&quot;]
+        A4[&quot;Thông báo hết món&lt;br/&gt;cho khách&quot;]
+        A6[&quot;Chuẩn bị món ăn&quot;]
+    end
+
+    A1 --&gt; A2 --&gt; A3
+    A3 --&gt;|Hết| A4
+    A3 --&gt;|Còn| A5 --&gt; A6
+</pre></div>
+<p>Khác biệt với Activity Diagram thông thường: BPMN <strong>nhấn mạnh ai làm gì</strong> qua các làn bơi, phù hợp
+khi cần trình bày cho nhiều phòng ban thấy rõ ranh giới trách nhiệm của mình trong một quy trình
+chung — rất hữu ích trong workshop có nhiều phòng ban tham gia (Chương 33).</p>
+<h2>15.6 Chọn đúng loại sơ đồ cho đúng mục đích</h2>
+<table>
+<thead>
+<tr>
+<th>Câu hỏi cần trả lời</th>
+<th>Dùng sơ đồ nào</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hệ thống có những chức năng gì, ai dùng?</td>
+<td>Use Case Diagram</td>
+</tr>
+<tr>
+<td>Luồng thao tác chi tiết, có rẽ nhánh điều kiện?</td>
+<td>Activity Diagram</td>
+</tr>
+<tr>
+<td>Thứ tự trao đổi thông tin giữa các hệ thống/thành phần?</td>
+<td>Sequence Diagram</td>
+</tr>
+<tr>
+<td>Quy trình đi qua nhiều phòng ban, cần rõ ai chịu trách nhiệm đoạn nào?</td>
+<td>BPMN (swimlane)</td>
+</tr>
+</tbody>
+</table>
+<h2>Bài tập</h2>
+<ol>
+<li>Vẽ Use Case Diagram cho tính năng &quot;Quản lý chương trình khách hàng thân thiết&quot; của FoodNow, với
+ít nhất 2 actor và 3 use case.</li>
+<li>Vẽ Activity Diagram mô tả luồng &quot;khách hàng huỷ đơn hàng&quot; — bao gồm ít nhất một điều kiện rẽ
+nhánh (ví dụ: huỷ được hay không tuỳ trạng thái đơn hàng hiện tại).</li>
+</ol>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li><strong>Dùng Activity Diagram khi cần thể hiện trách nhiệm liên phòng ban</strong>: nên dùng BPMN với
+swimlane để rõ ràng hơn về ai làm gì.</li>
+<li><strong>Vẽ sơ đồ quá chi tiết, nhồi nhét mọi trường hợp ngoại lệ vào một sơ đồ duy nhất</strong>: làm sơ đồ
+rối, khó đọc — nên tách thành nhiều sơ đồ nhỏ theo từng luồng chính/luồng phụ.</li>
+<li><strong>Coi việc vẽ đúng ký hiệu UML/BPMN chuẩn quan trọng hơn nội dung</strong>: với hầu hết đội dự án thực
+tế, sơ đồ đơn giản hoá dễ hiểu quan trọng hơn tuân thủ 100% ký hiệu chuẩn — trừ khi công ty có
+yêu cầu nghiêm ngặt về chuẩn tài liệu.</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<p>Bốn loại sơ đồ (Use Case, Activity, Sequence, BPMN) phục vụ các mục đích khác nhau — chọn đúng
+loại sơ đồ giúp giao tiếp hiệu quả hơn văn bản thuần, và giúp BA tự phát hiện lỗ hổng logic khi vẽ.
+Chương 16 sẽ học cách dùng <strong>Requirements Traceability Matrix (RTM)</strong> để theo dõi mọi yêu cầu đã
+thu thập và mô hình hoá được, đảm bảo không yêu cầu nào &quot;biến mất&quot; trong quá trình dự án.</p>
+
+</article>
+<div class="prev-next"><a class="prev" href="./ch14-phan-loai-yeu-cau.html">&larr; 14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a><a class="next" href="./ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM) &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

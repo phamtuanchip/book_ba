@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="./ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class="active"><a href="./ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="./ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="./ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="./ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="./ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="../part7-phu-luc/appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="../part7-phu-luc/appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 7: Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Trình bày được 4 giá trị cốt lõi của Agile Manifesto và ý nghĩa thực tế của từng giá trị.</li>
+<li>Giải thích được Agile <strong>không phải là một quy trình cụ thể</strong> mà là một tư duy/triết lý —
+Scrum, Kanban, XP (Chương 8-10) là các <strong>framework cụ thể hoá</strong> tư duy đó.</li>
+<li>So sánh được sự khác biệt gốc rễ giữa tư duy Agile và tư duy Waterfall.</li>
+</ul>
+<h2>7.1 Bối cảnh ra đời</h2>
+<p>Năm 2001, 17 chuyên gia phần mềm (đại diện nhiều phương pháp nhẹ khác nhau như Scrum, XP,
+Crystal...) họp lại và ký bản <strong>Agile Manifesto</strong> — không phải để tạo ra một quy trình mới, mà để
+phát biểu chung một <strong>hệ giá trị</strong> mà họ nhận thấy tạo ra phần mềm tốt hơn cách làm Waterfall
+truyền thống, vốn đang gây nhiều thất bại dự án vào thời điểm đó.</p>
+<h2>7.2 Bốn giá trị cốt lõi</h2>
+<blockquote>
+<p>Chúng tôi đánh giá cao:</p>
+<ul>
+<li><strong>Cá nhân và sự tương tác</strong> hơn là quy trình và công cụ</li>
+<li><strong>Phần mềm chạy được</strong> hơn là tài liệu đầy đủ</li>
+<li><strong>Hợp tác với khách hàng</strong> hơn là đàm phán hợp đồng</li>
+<li><strong>Phản hồi với thay đổi</strong> hơn là bám sát kế hoạch</li>
+</ul>
+<p>Mặc dù các giá trị bên phải vẫn có ý nghĩa, chúng tôi đánh giá cao hơn các giá trị bên trái.</p>
+</blockquote>
+<p>Điểm quan trọng thường bị hiểu sai: <strong>&quot;hơn là&quot; không có nghĩa là &quot;bỏ hẳn&quot;</strong>. Agile vẫn cần tài
+liệu, vẫn cần quy trình, vẫn cần hợp đồng — chỉ là khi phải đánh đổi, ưu tiên vế bên trái. Đây là
+lý do BA làm Agile <strong>vẫn viết tài liệu</strong> (Chương 19-24) — chỉ là tài liệu gọn hơn, tập trung vào
+việc đủ dùng để đội hiểu và làm đúng, thay vì tài liệu hoá cho mục đích hồ sơ/kiểm toán.</p>
+<table>
+<thead>
+<tr>
+<th>Giá trị</th>
+<th>Ý nghĩa với công việc BA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cá nhân &amp; tương tác hơn quy trình &amp; công cụ</td>
+<td>BA nên ưu tiên trao đổi trực tiếp với Dev/stakeholder hơn là chỉ gửi tài liệu rồi chờ phản hồi qua email</td>
+</tr>
+<tr>
+<td>Phần mềm chạy được hơn tài liệu đầy đủ</td>
+<td>BA viết User Story đủ để Dev làm đúng (Chương 23), không cần SRS 100 trang cho mọi tính năng nhỏ</td>
+</tr>
+<tr>
+<td>Hợp tác với khách hàng hơn đàm phán hợp đồng</td>
+<td>BA khuyến khích Sponsor/người dùng tham gia liên tục (demo mỗi sprint), không chỉ ký duyệt một lần rồi biến mất</td>
+</tr>
+<tr>
+<td>Phản hồi với thay đổi hơn bám sát kế hoạch</td>
+<td>BA xem yêu cầu thay đổi giữa dự án là <strong>bình thường, thậm chí tốt</strong> (nghĩa là đang học được điều mới), không phải sự cố cần né tránh</td>
+</tr>
+</tbody>
+</table>
+<h2>7.3 12 nguyên tắc (tóm tắt theo nhóm)</h2>
+<p>Agile Manifesto đi kèm 12 nguyên tắc chi tiết hơn — nhóm lại theo chủ đề để dễ nhớ:</p>
+<p><strong>Nhóm giao hàng liên tục &amp; sớm:</strong></p>
+<ol>
+<li>Ưu tiên cao nhất là làm hài lòng khách hàng qua việc giao phần mềm có giá trị <strong>sớm và liên tục</strong>.</li>
+<li>Giao phần mềm chạy được thường xuyên, chu kỳ càng ngắn càng tốt (vài tuần thay vì vài tháng).</li>
+</ol>
+<p><strong>Nhóm chào đón thay đổi:</strong>
+3. Chào đón thay đổi yêu cầu, kể cả ở giai đoạn muộn — Agile khai thác thay đổi để tạo lợi thế
+cạnh tranh cho khách hàng, thay vì coi đó là điều cần tránh.</p>
+<p><strong>Nhóm con người &amp; hợp tác:</strong>
+4. Người làm nghiệp vụ và Dev phải làm việc cùng nhau hằng ngày suốt dự án.
+5. Xây dựng dự án quanh những cá nhân có động lực, tin tưởng họ hoàn thành công việc.
+6. Cách truyền đạt thông tin hiệu quả nhất là trò chuyện trực tiếp (face-to-face).</p>
+<p><strong>Nhóm đo lường &amp; bền vững:</strong>
+7. Phần mềm chạy được là thước đo tiến độ chính.
+8. Agile khuyến khích nhịp độ phát triển bền vững, duy trì được mãi mãi — không chạy nước rút kiệt sức.</p>
+<p><strong>Nhóm kỹ thuật &amp; đơn giản hoá:</strong>
+9. Liên tục chú ý đến kỹ thuật xuất sắc và thiết kế tốt (xem thêm XP — Chương 9).
+10. Đơn giản — nghệ thuật tối đa hoá lượng công việc <strong>không cần làm</strong> — là căn bản.</p>
+<p><strong>Nhóm tự tổ chức &amp; cải tiến:</strong>
+11. Kiến trúc, yêu cầu, thiết kế tốt nhất đến từ đội <strong>tự tổ chức</strong>.
+12. Đội thường xuyên suy ngẫm cách làm việc hiệu quả hơn, rồi điều chỉnh hành vi cho phù hợp
+(đây là gốc rễ của buổi Retrospective trong Scrum — Chương 8).</p>
+<h2>7.4 Agile khác Waterfall ở đâu, về bản chất?</h2>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart TB
+    subgraph Waterfall[&quot;Tư duy Waterfall&quot;]
+        W1[&quot;Lập kế hoạch chi tiết&lt;br/&gt;một lần từ đầu&quot;] --&gt; W2[&quot;Thực thi đúng&lt;br/&gt;theo kế hoạch&quot;]
+        W2 --&gt; W3[&quot;Thay đổi = rủi ro&lt;br/&gt;cần kiểm soát chặt&quot;]
+    end
+    subgraph AgileBox[&quot;Tư duy Agile&quot;]
+        A1[&quot;Lập kế hoạch ở mức&lt;br/&gt;vừa đủ cho bước tiếp theo&quot;] --&gt; A2[&quot;Làm, đo lường,&lt;br/&gt;học hỏi&quot;]
+        A2 --&gt; A3[&quot;Thay đổi = cơ hội&lt;br/&gt;để làm tốt hơn&quot;]
+        A3 --&gt; A1
+    end
+</pre></div>
+<p>Khác biệt gốc rễ nằm ở <strong>niềm tin về việc có thể biết trước mọi thứ hay không</strong>:</p>
+<ul>
+<li>Waterfall giả định: nếu phân tích đủ kỹ ở đầu dự án, có thể <strong>biết trước gần như toàn bộ</strong> yêu
+cầu — nên đầu tư mạnh vào lập kế hoạch/phân tích chi tiết trước khi làm.</li>
+<li>Agile giả định: với sản phẩm phần mềm phức tạp, đặc biệt sản phẩm mới, <strong>không thể biết trước
+hết mọi thứ</strong> dù phân tích kỹ đến đâu — nên thay vì cố đoán đúng ngay từ đầu, hãy làm từng phần
+nhỏ, học từ phản hồi thực tế, rồi điều chỉnh liên tục.</li>
+</ul>
+<p>Điều này thay đổi căn bản vai trò của BA: trong Agile, BA <strong>không cố viết một tài liệu hoàn hảo
+ngay từ đầu</strong>, mà làm việc liên tục theo từng chu kỳ ngắn, liên tục làm rõ và tinh chỉnh yêu cầu
+dựa trên phản hồi thực tế từ mỗi lần giao hàng.</p>
+<h2>Bài tập</h2>
+<ol>
+<li>Với dự án FoodNow, nếu ban giám đốc chưa chắc chắn khách hàng có sẵn sàng trả thêm phí giao
+hàng nhanh hay không, mô hình nào (Waterfall hay Agile) giúp FoodNow <strong>kiểm chứng giả thuyết
+này với chi phí thấp hơn</strong>? Giải thích dựa trên nguyên tắc 1-3 ở mục 7.3.</li>
+<li>Chọn 3 trong 12 nguyên tắc Agile mà bạn thấy khó áp dụng nhất trong môi trường công ty truyền
+thống (nếu bạn từng làm việc ở môi trường như vậy), giải thích vì sao khó.</li>
+</ol>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li><strong>Nghĩ Agile nghĩa là &quot;không cần tài liệu, không cần kế hoạch&quot;</strong>: sai — Agile vẫn cần cả hai,
+chỉ ưu tiên vế bên trái của 4 giá trị khi phải đánh đổi, không phải bỏ hẳn vế bên phải.</li>
+<li><strong>Nghĩ Agile luôn nhanh hơn Waterfall</strong>: Agile không nhất thiết nhanh hơn về tổng thời gian —
+giá trị chính là <strong>giảm rủi ro và có phản hồi sớm</strong>, không phải &quot;làm nhanh hơn&quot; theo nghĩa đơn giản.</li>
+<li><strong>Áp dụng nửa vời</strong>: gọi là &quot;Agile&quot; nhưng vẫn giữ nguyên tư duy &quot;lập kế hoạch chi tiết một lần,
+không chấp nhận thay đổi&quot; — đây là một dạng &quot;Waterfall trá hình&quot; khá phổ biến trong thực tế.</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<p>Agile là một tư duy/triết lý (4 giá trị, 12 nguyên tắc), không phải một quy trình cụ thể — khác
+biệt gốc rễ với Waterfall nằm ở niềm tin &quot;có thể biết trước mọi thứ hay không&quot;. Chương 8 sẽ đi vào
+<strong>Scrum</strong> — framework Agile phổ biến nhất, cụ thể hoá tư duy này thành vai trò, sự kiện, và
+artifact rõ ràng mà BA cần nắm vững.</p>
+
+</article>
+<div class="prev-next"><a class="prev" href="./ch06-waterfall.html">&larr; 6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a><a class="next" href="./ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

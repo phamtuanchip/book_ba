@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow) — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="../part1-quy-trinh-phat-trien/ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class=""><a href="../part5-giao-tiep-kiem-thu-nghiem-thu/ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class="active"><a href="./appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="./appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="./appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="./appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="./appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="./appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Phụ lục A: Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</h1>
+<blockquote>
+<p>Nội dung dưới đây in lại đầy đủ từ file mẫu gốc, dùng được ngay để sao chép/điều chỉnh cho dự án
+thật của bạn: <code>templates/brd-prd/FoodNow-BRD.md</code> và <code>templates/brd-prd/FoodNow-PRD.md</code>. Xem giải
+thích cấu trúc và cách viết từng phần tại Chương 19.</p>
+</blockquote>
+<hr>
+<h1>Business Requirements Document (BRD)</h1>
+<h2>FoodNow — Ứng dụng đặt đồ ăn trực tuyến</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mã tài liệu</strong></td>
+<td>FN-BRD-001</td>
+</tr>
+<tr>
+<td><strong>Phiên bản</strong></td>
+<td>1.0</td>
+</tr>
+<tr>
+<td><strong>Ngày soạn thảo</strong></td>
+<td>2024-02-01</td>
+</tr>
+<tr>
+<td><strong>Người soạn thảo</strong></td>
+<td>Nguyễn Văn A — Business Analyst</td>
+</tr>
+<tr>
+<td><strong>Trạng thái</strong></td>
+<td>Đã phê duyệt</td>
+</tr>
+</tbody>
+</table>
+<h3>Lịch sử phiên bản</h3>
+<table>
+<thead>
+<tr>
+<th>Phiên bản</th>
+<th>Ngày</th>
+<th>Người sửa</th>
+<th>Mô tả thay đổi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>2024-01-15</td>
+<td>Nguyễn Văn A</td>
+<td>Bản nháp đầu tiên</td>
+</tr>
+<tr>
+<td>0.2</td>
+<td>2024-01-25</td>
+<td>Nguyễn Văn A</td>
+<td>Cập nhật sau workshop với quản lý 12 chi nhánh</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>2024-02-01</td>
+<td>Nguyễn Văn A</td>
+<td>Bản chính thức, đã Ban giám đốc phê duyệt</td>
+</tr>
+</tbody>
+</table>
+<h2>1. Bối cảnh &amp; vấn đề nghiệp vụ</h2>
+<p>Chuỗi nhà hàng FoodNow hiện có 12 chi nhánh tại TP.HCM, nhận đặt hàng qua điện thoại (tổng đài nội
+bộ) và các ứng dụng giao đồ ăn của bên thứ ba (chiếm khoảng 65% tổng số đơn hàng online). Việc phụ
+thuộc vào app bên thứ ba gây ra 3 vấn đề: chi phí hoa hồng cao (20-25% giá trị mỗi đơn hàng), không
+sở hữu dữ liệu khách hàng, và không kiểm soát được trải nghiệm thương hiệu.</p>
+<h2>2. Mục tiêu kinh doanh</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Mục tiêu</th>
+<th>Chỉ số đo lường</th>
+<th>Hạn hoàn thành</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BO-01</td>
+<td>Giảm phụ thuộc vào app bên thứ ba</td>
+<td>Tỷ trọng đơn hàng qua app riêng đạt tối thiểu 40% tổng đơn online trong 6 tháng sau go-live</td>
+<td>6 tháng sau go-live</td>
+</tr>
+<tr>
+<td>BO-02</td>
+<td>Tăng biên lợi nhuận trên mỗi đơn hàng</td>
+<td>Biên lợi nhuận trung bình/đơn tăng tối thiểu 15% so với đơn qua app bên thứ ba</td>
+<td>12 tháng sau go-live</td>
+</tr>
+<tr>
+<td>BO-03</td>
+<td>Xây dựng dữ liệu khách hàng riêng</td>
+<td>Thu thập được thông tin và lịch sử mua hàng của tối thiểu 10.000 khách hàng</td>
+<td>6 tháng sau go-live</td>
+</tr>
+</tbody>
+</table>
+<h2>3. Phạm vi</h2>
+<h3>Trong phạm vi (In scope)</h3>
+<ul>
+<li>Ứng dụng di động (iOS + Android) cho khách hàng đặt món, thanh toán, theo dõi đơn hàng.</li>
+<li>Hệ thống quản trị (web) cho nhân viên chi nhánh xác nhận và xử lý đơn hàng.</li>
+<li>Tích hợp cổng thanh toán online (thẻ, ví điện tử) và thanh toán khi nhận hàng (COD).</li>
+<li>Chương trình khách hàng thân thiết cơ bản (tích điểm, đổi ưu đãi).</li>
+<li>Thông báo trạng thái đơn hàng theo thời gian thực.</li>
+</ul>
+<h3>Ngoài phạm vi (Out of scope) — cho phiên bản đầu tiên</h3>
+<ul>
+<li>Tính năng đặt bàn trước để ăn tại quán.</li>
+<li>Giao hàng liên tỉnh/ngoài TP.HCM.</li>
+<li>Đa ngôn ngữ (chỉ tiếng Việt ở phiên bản đầu).</li>
+<li>Tích hợp với hệ thống kế toán/ERP hiện có.</li>
+<li>Chương trình giới thiệu bạn bè (referral program).</li>
+</ul>
+<h2>4. Đối tượng sử dụng (Stakeholders)</h2>
+<table>
+<thead>
+<tr>
+<th>Nhóm</th>
+<th>Nhu cầu tổng quan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Khách hàng</td>
+<td>Đặt món nhanh, theo dõi đơn hàng, tích điểm thành viên</td>
+</tr>
+<tr>
+<td>Nhân viên chi nhánh</td>
+<td>Nhận và xử lý đơn hàng hiệu quả, không thao tác thủ công qua điện thoại</td>
+</tr>
+<tr>
+<td>Người giao hàng</td>
+<td>Nhận thông tin đơn hàng rõ ràng, cập nhật trạng thái giao hàng dễ dàng</td>
+</tr>
+<tr>
+<td>Ban giám đốc</td>
+<td>Theo dõi số liệu kinh doanh tổng thể, biên lợi nhuận theo kênh bán hàng</td>
+</tr>
+<tr>
+<td>Phòng Marketing</td>
+<td>Quản lý chương trình khách hàng thân thiết, gửi khuyến mãi</td>
+</tr>
+<tr>
+<td>Phòng Kế toán</td>
+<td>Đối soát doanh thu, dữ liệu giao dịch chính xác</td>
+</tr>
+</tbody>
+</table>
+<h2>5. Yêu cầu nghiệp vụ chi tiết</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Yêu cầu</th>
+<th>Nguồn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BR-01</td>
+<td>Khách hàng phải đặt và hoàn tất thanh toán trong một luồng liên tục, không quá 2 phút với đơn hàng thông thường</td>
+<td>Ban giám đốc, workshop khách hàng</td>
+</tr>
+<tr>
+<td>BR-02</td>
+<td>Nhân viên chi nhánh phải nhận được thông báo đơn hàng mới ngay lập tức, không cần thao tác kiểm tra thủ công</td>
+<td>Quản lý chi nhánh</td>
+</tr>
+<tr>
+<td>BR-03</td>
+<td>Hệ thống phải ghi nhận và tích luỹ điểm thưởng cho khách hàng theo giá trị đơn hàng</td>
+<td>Phòng Marketing</td>
+</tr>
+<tr>
+<td>BR-04</td>
+<td>Ban giám đốc phải xem được báo cáo doanh thu, số đơn hàng theo từng chi nhánh, theo ngày/tuần/tháng</td>
+<td>Ban giám đốc</td>
+</tr>
+<tr>
+<td>BR-05</td>
+<td>Hệ thống phải cho phép nhân viên chi nhánh từ chối đơn hàng (hết món, quá tải) kèm lý do rõ ràng gửi lại khách hàng</td>
+<td>Quản lý chi nhánh</td>
+</tr>
+</tbody>
+</table>
+<h2>6. Giả định &amp; ràng buộc</h2>
+<p><strong>Giả định:</strong> toàn bộ 12 chi nhánh có kết nối Internet ổn định; khách hàng mục tiêu chủ yếu dùng
+smartphone (iOS/Android).</p>
+<p><strong>Ràng buộc:</strong> ngân sách phát triển giai đoạn 1 tối đa 1.5 tỷ VNĐ; ra mắt phiên bản đầu trong vòng
+6 tháng; tuân thủ quy định bảo vệ dữ liệu cá nhân khách hàng hiện hành.</p>
+<h2>7. Rủi ro sơ bộ</h2>
+<table>
+<thead>
+<tr>
+<th>Rủi ro</th>
+<th>Mức độ</th>
+<th>Biện pháp giảm thiểu sơ bộ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Khách hàng quen dùng app bên thứ ba, ngại chuyển sang app mới</td>
+<td>Cao</td>
+<td>Chương trình khuyến mãi ra mắt, ưu đãi độc quyền trên app riêng</td>
+</tr>
+<tr>
+<td>Nhân viên chi nhánh khó thích nghi hệ thống mới</td>
+<td>Trung bình</td>
+<td>Đào tạo kỹ trước go-live</td>
+</tr>
+<tr>
+<td>Trễ tiến độ do tích hợp cổng thanh toán phức tạp hơn dự kiến</td>
+<td>Trung bình</td>
+<td>Ưu tiên tích hợp cổng thanh toán ở sprint đầu để phát hiện rủi ro sớm</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Xem RAID Log đầy đủ tại Phụ lục còn lại và Chương 31.)</em></p>
+<h2>8. Tiêu chí thành công</h2>
+<ul>
+<li>Đạt được BO-01, BO-02, BO-03 trong khung thời gian đề ra.</li>
+<li>Ứng dụng đạt điểm đánh giá trung bình tối thiểu 4.2/5 trên App Store/Google Play sau 3 tháng.</li>
+<li>Tỷ lệ đơn hàng lỗi/khiếu nại dưới 2% tổng số đơn.</li>
+</ul>
+<h2>9. Phê duyệt</h2>
+<table>
+<thead>
+<tr>
+<th>Vai trò</th>
+<th>Họ tên</th>
+<th>Chữ ký/Xác nhận</th>
+<th>Ngày</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sponsor (Giám đốc điều hành)</td>
+<td>Trần Thị B</td>
+<td>Đã phê duyệt</td>
+<td>2024-02-01</td>
+</tr>
+<tr>
+<td>Trưởng phòng Marketing</td>
+<td>Lê Văn C</td>
+<td>Đã phê duyệt</td>
+<td>2024-02-01</td>
+</tr>
+<tr>
+<td>Trưởng phòng Vận hành</td>
+<td>Phạm Thị D</td>
+<td>Đã phê duyệt</td>
+<td>2024-02-01</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Product Requirements Document (PRD)</h1>
+<h2>FoodNow App — Phiên bản 1.0</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mã tài liệu</strong></td>
+<td>FN-PRD-001</td>
+</tr>
+<tr>
+<td><strong>Phiên bản</strong></td>
+<td>1.0</td>
+</tr>
+<tr>
+<td><strong>Ngày soạn thảo</strong></td>
+<td>2024-02-10</td>
+</tr>
+<tr>
+<td><strong>Người soạn thảo</strong></td>
+<td>Nguyễn Văn A — Business Analyst</td>
+</tr>
+<tr>
+<td><strong>Tài liệu gốc liên quan</strong></td>
+<td>FN-BRD-001</td>
+</tr>
+</tbody>
+</table>
+<h2>1. Tóm tắt sản phẩm</h2>
+<p>FoodNow App là ứng dụng di động cho phép khách hàng của chuỗi nhà hàng FoodNow đặt món, thanh
+toán, và theo dõi đơn hàng trực tiếp — không qua nền tảng giao đồ ăn bên thứ ba, đi kèm hệ thống
+quản trị web cho nhân viên chi nhánh xử lý đơn hàng.</p>
+<h2>2. Đối tượng người dùng &amp; Persona</h2>
+<p><strong>Persona 1 — &quot;Chị Hương&quot; (Khách hàng thân thiết)</strong>: 32 tuổi, nhân viên văn phòng, đặt đồ ăn trưa
+3-4 lần/tuần. Ưu tiên tốc độ đặt hàng, theo dõi đơn, tích điểm đổi ưu đãi.</p>
+<p><strong>Persona 2 — &quot;Anh Tùng&quot; (Nhân viên chi nhánh)</strong>: 24 tuổi, thu ngân kiêm xử lý đơn hàng tại chi
+nhánh Quận 1. Ưu tiên nhận đơn rõ ràng, nhanh, không phải vừa nghe điện thoại vừa ghi chép tay.</p>
+<h2>3. Danh sách tính năng (theo Epic)</h2>
+<p><strong>Epic A — Đặt món &amp; Thanh toán</strong>: xem thực đơn, giỏ hàng, chọn giao nhận, thanh toán online/COD,
+áp dụng mã giảm giá.</p>
+<p><strong>Epic B — Theo dõi đơn hàng</strong>: trạng thái real-time, thông báo đẩy, lịch sử đơn hàng.</p>
+<p><strong>Epic C — Chương trình khách hàng thân thiết</strong>: tích điểm tự động, xem điểm/lịch sử, đổi điểm lấy
+ưu đãi.</p>
+<p><strong>Epic D — Quản trị đơn hàng</strong>: nhận thông báo đơn mới, xác nhận/từ chối, cập nhật trạng thái, báo
+cáo doanh thu.</p>
+<h2>4. Yêu cầu phi chức năng (tổng quan)</h2>
+<table>
+<thead>
+<tr>
+<th>Nhóm</th>
+<th>Yêu cầu tổng quan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hiệu năng</td>
+<td>Thao tác chính phản hồi dưới 2 giây</td>
+</tr>
+<tr>
+<td>Bảo mật</td>
+<td>Dữ liệu thanh toán/cá nhân được mã hoá, tuân thủ quy định bảo vệ dữ liệu</td>
+</tr>
+<tr>
+<td>Khả năng mở rộng</td>
+<td>Chịu tải gấp 3 lần hiện tại khi mở rộng chi nhánh</td>
+</tr>
+</tbody>
+</table>
+<h2>5. Ưu tiên hoá tính năng (MoSCoW)</h2>
+<table>
+<thead>
+<tr>
+<th>Tính năng</th>
+<th>Mức ưu tiên</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Đặt món, thanh toán (Epic A)</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>Theo dõi đơn hàng real-time (Epic B)</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>Quản trị đơn hàng (Epic D)</td>
+<td>Must have</td>
+</tr>
+<tr>
+<td>Chương trình khách hàng thân thiết (Epic C)</td>
+<td>Should have</td>
+</tr>
+<tr>
+<td>Đặt bàn trước tại quán</td>
+<td>Won't have (phiên bản 1.0)</td>
+</tr>
+<tr>
+<td>Đa ngôn ngữ</td>
+<td>Won't have (phiên bản 1.0)</td>
+</tr>
+</tbody>
+</table>
+<h2>6. Lộ trình phát hành sơ bộ</h2>
+<table>
+<thead>
+<tr>
+<th>Giai đoạn</th>
+<th>Nội dung</th>
+<th>Thời gian dự kiến</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Increment 1</td>
+<td>Epic A — thử nghiệm 2 chi nhánh</td>
+<td>Tháng 1-2</td>
+</tr>
+<tr>
+<td>Increment 2</td>
+<td>Epic B + D — mở rộng 12 chi nhánh</td>
+<td>Tháng 3-4</td>
+</tr>
+<tr>
+<td>Increment 3</td>
+<td>Epic C — ra mắt công khai đầy đủ</td>
+<td>Tháng 5-6</td>
+</tr>
+</tbody>
+</table>
+<h2>7. Chỉ số đo lường thành công của sản phẩm</h2>
+<ul>
+<li>Tỷ lệ hoàn tất đặt hàng ≥ 60%.</li>
+<li>Thời gian trung bình hoàn tất đơn hàng &lt; 2 phút.</li>
+<li>Tỷ lệ khách hàng quay lại đặt đơn thứ 2 trong vòng 30 ngày ≥ 35%.</li>
+</ul>
+
+</article>
+<div class="prev-next"><a class="prev" href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">&larr; 40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a><a class="next" href="./appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow) &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

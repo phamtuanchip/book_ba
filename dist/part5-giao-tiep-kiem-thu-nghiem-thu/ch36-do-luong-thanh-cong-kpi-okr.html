@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback — IT Business Analyst — Từ Zero Đến Thành Thạo</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">IT Business Analyst — Từ Zero Đến Thành Thạo</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 0 — Nhập môn &amp; định hướng nghề BA</div><ul><li class=""><a href="../part0-nhap-mon/ch01-ba-la-ai.html">1. BA là ai, làm gì? Vai trò cầu nối giữa nghiệp vụ và kỹ thuật</a></li><li class=""><a href="../part0-nhap-mon/ch02-tong-quan-sdlc.html">2. Tổng quan SDLC: các giai đoạn, vì sao dự án phần mềm cần quy trình</a></li><li class=""><a href="../part0-nhap-mon/ch03-he-sinh-thai-du-an-phan-mem.html">3. Hệ sinh thái một dự án phần mềm: BA phối hợp với ai, khi nào</a></li><li class=""><a href="../part0-nhap-mon/ch04-dinh-huong-nghe-nghiep-ba.html">4. Định hướng nghề nghiệp BA: lộ trình, chứng chỉ IIBA/CBAP, CCBA, PMI-PBA</a></li><li class=""><a href="../part0-nhap-mon/ch05-bo-ky-nang-cong-cu-ba.html">5. Bộ kỹ năng &amp; công cụ của BA: kỹ năng cứng, kỹ năng mềm, công cụ phổ biến</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 1 — Quy trình phát triển &amp; quản lý phần mềm</div><ul><li class=""><a href="../part1-quy-trinh-phat-trien/ch06-waterfall.html">6. Waterfall: đặc điểm, các giai đoạn tuần tự, ưu/nhược điểm</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch07-agile-manifesto.html">7. Agile: Agile Manifesto, 12 nguyên tắc, tư duy Agile khác Waterfall ở đâu</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch08-scrum-chi-tiet.html">8. Scrum chi tiết: vai trò, sự kiện, artifact</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch09-extreme-programming-xp.html">9. Extreme Programming (XP): thực hành kỹ thuật và vai trò BA</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch10-kanban-so-sanh-mo-hinh.html">10. Kanban &amp; so sánh các mô hình: Waterfall vs Scrum vs Kanban vs XP</a></li><li class=""><a href="../part1-quy-trinh-phat-trien/ch11-vai-tro-ba-theo-mo-hinh.html">11. Vai trò và trách nhiệm cụ thể của BA trong từng mô hình</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 2 — Thu thập &amp; phân tích yêu cầu</div><ul><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch12-ky-thuat-elicitation.html">12. Kỹ thuật Elicitation: interview, workshop, survey, observation</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch13-stakeholder-analysis-raci.html">13. Stakeholder Analysis &amp; ma trận RACI</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch14-phan-loai-yeu-cau.html">14. Phân loại yêu cầu: Business, Stakeholder, Solution, Transition</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch15-requirements-modeling.html">15. Mô hình hoá yêu cầu: Use Case, Activity, Sequence Diagram, BPMN cơ bản</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch16-requirements-traceability-matrix.html">16. Requirements Traceability Matrix (RTM)</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch17-requirements-validation-verification.html">17. Requirements Validation &amp; Verification</a></li><li class=""><a href="../part2-thu-thap-phan-tich-yeu-cau/ch18-quan-ly-thay-doi-yeu-cau.html">18. Quản lý thay đổi yêu cầu: scope creep, Change Request</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 3 — Tài liệu BA cốt lõi (kèm mẫu điền sẵn)</div><ul><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch19-brd-prd.html">19. BRD &amp; PRD: khác nhau ở đâu, cấu trúc, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch20-srs-ieee830.html">20. SRS theo chuẩn IEEE 830: cấu trúc, cách viết, mẫu đầy đủ</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch21-frd-non-functional.html">21. FRD &amp; yêu cầu phi chức năng (performance, security, usability)</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch22-use-case-specification.html">22. Use Case Specification: actor, flow chính/phụ, exception, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch23-user-story-acceptance-criteria.html">23. User Story &amp; Acceptance Criteria: INVEST, Gherkin, mẫu</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch24-epic-feature-backlog.html">24. Epic, Feature, User Story: phân rã backlog, mẫu backlog</a></li><li class=""><a href="../part3-tai-lieu-ba-cot-loi/ch25-wireframe-prototype-cho-ba.html">25. Wireframe &amp; Prototype cơ bản cho BA</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 4 — Quản lý dự án &amp; giao hàng</div><ul><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch26-uu-tien-hoa-backlog.html">26. Ưu tiên hoá Backlog: MoSCoW, WSJF, mô hình Kano</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch27-sprint-planning-vai-tro-ba.html">27. Sprint Planning &amp; vai trò của BA trong sprint</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch28-incremental-iterative-delivery.html">28. Incremental &amp; Iterative Delivery: khái niệm, phân biệt</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch29-release-plan-delivery-document.html">29. Release Plan &amp; Delivery Document: mẫu Incremental Delivery Plan</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch30-estimation-co-ban-cho-ba.html">30. Estimation cơ bản cho BA: story points, T-shirt sizing</a></li><li class=""><a href="../part4-quan-ly-du-an-giao-hang/ch31-raid-log-quan-ly-rui-ro.html">31. RAID Log: quản lý Risk, Assumption, Issue, Dependency</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 5 — Giao tiếp, kiểm thử &amp; nghiệm thu</div><ul><li class=""><a href="./ch32-giao-tiep-hieu-qua.html">32. Giao tiếp hiệu quả của BA: email, họp, trình bày với stakeholder</a></li><li class=""><a href="./ch33-facilitation-workshop.html">33. Facilitation: điều phối workshop, requirement review meeting</a></li><li class=""><a href="./ch34-ba-va-qa-uat.html">34. BA &amp; QA: viết test case cơ bản, UAT — mẫu UAT checklist</a></li><li class=""><a href="./ch35-sign-off-nghiem-thu.html">35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a></li><li class="active"><a href="./ch36-do-luong-thanh-cong-kpi-okr.html">36. Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần 6 — Công cụ &amp; kỹ năng nâng cao</div><ul><li class=""><a href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch38-data-sql-co-ban-cho-ba.html">38. Data &amp; SQL cơ bản cho BA: đọc hiểu mô hình dữ liệu, SELECT query</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch39-domain-knowledge-nganh-dac-thu.html">39. Domain knowledge: BA trong Banking, E-commerce, Insurance</a></li><li class=""><a href="../part6-cong-cu-nang-cao/ch40-case-study-tong-hop.html">40. Case study tổng hợp &quot;FoodNow&quot;: nhìn lại toàn bộ vòng đời dự án</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="../part7-phu-luc/appendix-a-mau-brd-prd-day-du.html">Phụ lục A — Mẫu BRD &amp; PRD đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-b-mau-srs-day-du.html">Phụ lục B — Mẫu SRS đầy đủ theo IEEE 830 (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-c-mau-epic-user-story-backlog.html">Phụ lục C — Mẫu Epic + User Story backlog đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-d-mau-incremental-delivery-plan.html">Phụ lục D — Mẫu Incremental Delivery Plan đầy đủ (dự án FoodNow)</a></li><li class=""><a href="../part7-phu-luc/appendix-e-glossary-thuat-ngu-ba.html">Phụ lục E — Bảng thuật ngữ BA (Glossary) tra cứu nhanh</a></li><li class=""><a href="../part7-phu-luc/appendix-f-tai-lieu-tham-khao.html">Phụ lục F — Tài liệu tham khảo &amp; nguồn học thêm</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 36: Đo lường thành công sau go-live: KPI, OKR, thu thập feedback</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Phân biệt KPI và OKR — hai công cụ đo lường hay bị dùng lẫn lộn.</li>
+<li>Thiết kế được bộ KPI phù hợp để đo lường thành công của một tính năng/sản phẩm sau go-live.</li>
+<li>Xây dựng được vòng lặp thu thập phản hồi liên tục sau go-live, kết nối ngược lại vào backlog.</li>
+</ul>
+<h2>36.1 Vì sao công việc BA không kết thúc ở go-live?</h2>
+<p>Nhắc lại từ Chương 1 và Chương 2: nhiều BA mới nghĩ công việc kết thúc khi sản phẩm go-live thành
+công (sign-off — Chương 35). Thực tế, <strong>go-live chỉ là điểm khởi đầu để kiểm chứng</strong> liệu các mục
+tiêu kinh doanh đề ra từ BRD (Chương 19) có thực sự đạt được không — Business Requirements (như
+BO-01, BO-02, BO-03 của FoodNow) chỉ được xác nhận <strong>sau một khoảng thời gian vận hành thực tế</strong>,
+không phải ngay tại thời điểm ra mắt.</p>
+<h2>36.2 KPI vs OKR — khác nhau ở đâu?</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>KPI (Key Performance Indicator)</th>
+<th>OKR (Objectives and Key Results)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bản chất</td>
+<td>Chỉ số đo lường hiệu suất liên tục, thường theo dõi dài hạn</td>
+<td>Khung đặt mục tiêu theo chu kỳ (thường theo quý), gồm Objective (định tính, truyền cảm hứng) + Key Results (định lượng, đo được)</td>
+</tr>
+<tr>
+<td>Ví dụ</td>
+<td>&quot;Tỷ lệ chuyển đổi đặt hàng: 55%&quot; (theo dõi liên tục)</td>
+<td>&quot;Objective: Trở thành kênh đặt hàng ưa thích nhất của khách hàng FoodNow. Key Result 1: Tỷ trọng đơn qua app riêng đạt 40%. Key Result 2: Điểm đánh giá app đạt 4.2/5&quot;</td>
+</tr>
+<tr>
+<td>Mục đích</td>
+<td>Giám sát sức khoẻ vận hành liên tục</td>
+<td>Định hướng và tạo động lực cho một giai đoạn cụ thể, thường tham vọng hơn KPI thông thường</td>
+</tr>
+<tr>
+<td>Quan hệ với BRD</td>
+<td>KPI thường map trực tiếp từ &quot;Chỉ số đo lường&quot; trong Business Objectives (Chương 19, mục 2)</td>
+<td>OKR có thể bao trùm nhiều KPI, đặt trong bối cảnh mục tiêu truyền cảm hứng hơn</td>
+</tr>
+</tbody>
+</table>
+<p>Trong thực tế, nhiều tổ chức dùng cả hai song song: <strong>OKR</strong> để định hướng ưu tiên theo quý (giúp
+trả lời &quot;quý này tập trung vào điều gì&quot;), <strong>KPI</strong> để giám sát liên tục sức khoẻ vận hành hằng ngày.</p>
+<h2>36.3 Thiết kế bộ KPI cho FoodNow (sau go-live Increment 1)</h2>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Công thức/Cách đo</th>
+<th>Mục tiêu</th>
+<th>Nguồn dữ liệu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tỷ lệ hoàn tất đặt hàng (Conversion rate)</td>
+<td>Số đơn hoàn tất / Số lượt mở app đến bước giỏ hàng</td>
+<td>≥ 60%</td>
+<td>Analytics trong app</td>
+</tr>
+<tr>
+<td>Thời gian trung bình hoàn tất đơn hàng</td>
+<td>Thời gian từ mở app đến thanh toán xong, trung bình</td>
+<td>&lt; 2 phút</td>
+<td>Analytics trong app</td>
+</tr>
+<tr>
+<td>Tỷ lệ đơn hàng lỗi/khiếu nại</td>
+<td>Số đơn có khiếu nại / Tổng số đơn</td>
+<td>&lt; 2%</td>
+<td>Hệ thống hỗ trợ khách hàng</td>
+</tr>
+<tr>
+<td>Tỷ lệ khách quay lại (Retention)</td>
+<td>% khách đặt đơn thứ 2 trong vòng 30 ngày</td>
+<td>≥ 35%</td>
+<td>CRM/dữ liệu khách hàng</td>
+</tr>
+<tr>
+<td>Tỷ trọng đơn qua app riêng</td>
+<td>Số đơn qua app riêng / Tổng đơn online</td>
+<td>≥ 40% (trong 6 tháng)</td>
+<td>Đối soát doanh thu theo kênh</td>
+</tr>
+</tbody>
+</table>
+<p>Các KPI này <strong>truy vết trực tiếp</strong> về Business Objectives (BO-01, BO-02, BO-03) và Success Criteria
+trong BRD (Chương 19) — một lần nữa áp dụng tư duy truy vết đã học ở Chương 16 (RTM), nhưng lần
+này áp dụng cho <strong>giai đoạn sau go-live</strong> thay vì giai đoạn phát triển.</p>
+<h2>36.4 Vòng lặp thu thập phản hồi liên tục</h2>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    GoLive[&quot;Go-live&quot;] --&gt; Collect[&quot;Thu thập dữ liệu:&lt;br/&gt;KPI, feedback trực tiếp,&lt;br/&gt;đánh giá trên App Store&quot;]
+    Collect --&gt; Analyze[&quot;Phân tích:&lt;br/&gt;KPI có đạt mục tiêu?&lt;br/&gt;Vấn đề gì nổi bật?&quot;]
+    Analyze --&gt; Backlog[&quot;Đưa phát hiện vào&lt;br/&gt;Product Backlog&lt;br/&gt;(Chương 24, 26)&quot;]
+    Backlog --&gt; NextIncrement[&quot;Ưu tiên cho&lt;br/&gt;Increment tiếp theo&quot;]
+    NextIncrement --&gt; GoLive
+</pre></div>
+<p>Đây là cách kết nối trực tiếp giữa &quot;đo lường sau go-live&quot; và &quot;lập kế hoạch phát triển tiếp theo&quot; —
+BA không chỉ báo cáo số liệu rồi dừng lại, mà cần <strong>biến phát hiện thành hành động cụ thể</strong> trong
+backlog. Ví dụ: nếu KPI &quot;Tỷ lệ hoàn tất đặt hàng&quot; chỉ đạt 45% (dưới mục tiêu 60%), BA cần điều tra
+nguyên nhân (có thể qua phỏng vấn khách hàng — Chương 12) và đề xuất User Story mới để cải thiện
+(ví dụ: đơn giản hoá luồng thanh toán nếu phát hiện khách hàng bỏ ngang ở bước đó).</p>
+<h2>36.5 Các nguồn thu thập phản hồi</h2>
+<ul>
+<li><strong>Định lượng</strong>: Analytics trong app (conversion, thời gian thao tác), đánh giá sao trên App
+Store/Google Play.</li>
+<li><strong>Định tính</strong>: phỏng vấn/khảo sát khách hàng (Chương 12), phản hồi từ nhân viên chi nhánh trực
+tiếp vận hành hệ thống hằng ngày, bình luận trên App Store/mạng xã hội.</li>
+<li><strong>Bán định lượng</strong>: Net Promoter Score (NPS) — hỏi khách hàng &quot;Anh/chị có sẵn sàng giới thiệu app
+FoodNow cho bạn bè không, theo thang điểm 0-10?&quot; — vừa đo lường được, vừa phản ánh cảm nhận thực.</li>
+</ul>
+<h2>Bài tập</h2>
+<ol>
+<li>Viết một OKR cho quý tiếp theo sau khi FoodNow hoàn thành cả 3 Increment (liên hệ lại BRD —
+Chương 19), theo cấu trúc Objective + 2-3 Key Results.</li>
+<li>Giả sử KPI &quot;Tỷ lệ khách quay lại&quot; chỉ đạt 20% (mục tiêu 35%). Đề xuất 2 hành động cụ thể (có thể
+liên quan đến chương trình khách hàng thân thiết — Epic C) để cải thiện, và giải thích cách bạn
+sẽ xác minh giả thuyết trước khi đầu tư phát triển.</li>
+</ol>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li><strong>Chỉ đo KPI mà không hành động dựa trên kết quả</strong>: biến việc đo lường thành báo cáo hình thức,
+mất đi giá trị thực sự — luôn cần vòng lặp khép kín như mục 36.4.</li>
+<li><strong>Đặt KPI không liên kết với Business Objectives ban đầu</strong>: đo những con số &quot;dễ đo&quot; nhưng không
+phản ánh đúng mục tiêu kinh doanh thật sự của dự án.</li>
+<li><strong>Coi go-live là điểm kết thúc công việc của BA</strong>: bỏ lỡ giai đoạn quan trọng để chứng minh (hoặc
+phát hiện sớm nếu chưa đạt) giá trị thực sự mà dự án mang lại.</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<p>KPI theo dõi liên tục sức khoẻ vận hành, OKR định hướng mục tiêu theo chu kỳ — cả hai cần truy vết
+về Business Objectives ban đầu, và phát hiện từ đo lường cần được đưa vào vòng lặp cải tiến backlog
+liên tục, không dừng lại ở việc báo cáo số liệu. Đây là chương khép lại Phần 5. Từ Chương 37, sách
+bước vào Phần 6 — Công cụ &amp; kỹ năng nâng cao, bắt đầu với cách dùng Jira &amp; Confluence hiệu quả
+trong công việc BA hằng ngày.</p>
+
+</article>
+<div class="prev-next"><a class="prev" href="./ch35-sign-off-nghiem-thu.html">&larr; 35. Sign-off &amp; nghiệm thu: quy trình ký duyệt, mẫu Sign-off Document</a><a class="next" href="../part6-cong-cu-nang-cao/ch37-jira-confluence-cho-ba.html">37. Jira &amp; Confluence cho BA: quản lý backlog, viết &amp; liên kết tài liệu &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>
