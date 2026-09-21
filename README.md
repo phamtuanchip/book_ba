@@ -5,6 +5,8 @@ Sách dạy nghề Business Analyst (BA) trong ngành phần mềm bằng tiến
 BA trong từng giai đoạn dự án, đến bộ tài liệu mẫu điền sẵn dùng được ngay (SRS, BRD/PRD, Epic,
 User Story, Incremental Delivery Document...).
 
+> **Đọc online: https://phamtuanchip.github.io/book_ba/**
+>
 > **Trạng thái: đã viết xong toàn bộ 40 chương + 6 phụ lục, đã rà soát, có bản HTML và PDF sẵn sàng
 > phát hành.** Xem `dist/index.html` để đọc bản HTML, hoặc `dist/it-business-analyst-tu-zero-den-
 > thanh-thao.pdf` cho bản in — cả hai commit sẵn trong repo, chạy `npm run build:all` để build lại
